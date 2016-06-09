@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9DB921044985AA834DEEB624CA05E8F9E97D14E9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9DB921044985AA834DEEB624CA05E8F9E97D14E9" : 0,
+    "DCE0669205D167FFAFFB4B98DBEDA3691016E6C5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "515A966F-FFEE-4D4C-8714-C4F1372EDF15",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9DB921044985AA834DEEB624CA05E8F9E97D14E9" : "TestFacebookProject\/",
+    "DCE0669205D167FFAFFB4B98DBEDA3691016E6C5" : "IdapStudy\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "KSTestFacebookProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "KSTestFacebookProject\/KSTestFacebookProject.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kulikovs\/TestFacebookProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9DB921044985AA834DEEB624CA05E8F9E97D14E9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kulikovs\/idap-study.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCE0669205D167FFAFFB4B98DBEDA3691016E6C5"
+    }
+  ]
+}

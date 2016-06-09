@@ -44,9 +44,17 @@
 		C97BFE261D09C42A00F6D42A /* KSView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFDF41D09C42A00F6D42A /* KSView.m */; };
 		C97BFE271D09C42A00F6D42A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFDFD1D09C42A00F6D42A /* AppDelegate.m */; };
 		C97BFE281D09C42A00F6D42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97BFDFE1D09C42A00F6D42A /* Assets.xcassets */; };
-		C97BFE291D09C42A00F6D42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFDFF1D09C42A00F6D42A /* LaunchScreen.storyboard */; };
-		C97BFE2A1D09C42A00F6D42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE011D09C42A00F6D42A /* Main.storyboard */; };
 		C97BFE2C1D09C42A00F6D42A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE041D09C42A00F6D42A /* main.m */; };
+		C97BFE391D09D00300F6D42A /* KSLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE351D09D00300F6D42A /* KSLoginView.m */; };
+		C97BFE3A1D09D00300F6D42A /* KSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE371D09D00300F6D42A /* KSLoginViewController.m */; };
+		C97BFE3B1D09D00300F6D42A /* KSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE381D09D00300F6D42A /* KSLoginViewController.xib */; };
+		C97BFE3E1D09D07F00F6D42A /* fblogin1.png in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE3D1D09D07F00F6D42A /* fblogin1.png */; };
+		C97BFE471D09D2A400F6D42A /* KSFriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE411D09D2A400F6D42A /* KSFriendDetailViewController.m */; };
+		C97BFE481D09D2A400F6D42A /* KSFriendDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE421D09D2A400F6D42A /* KSFriendDetailViewController.xib */; };
+		C97BFE491D09D2A400F6D42A /* KSFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE451D09D2A400F6D42A /* KSFriendsViewController.m */; };
+		C97BFE4A1D09D2A400F6D42A /* KSFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE461D09D2A400F6D42A /* KSFriendsViewController.xib */; };
+		C97BFE501D09DA2500F6D42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE4C1D09DA2500F6D42A /* LaunchScreen.storyboard */; };
+		C97BFE511D09DA2500F6D42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE4E1D09DA2500F6D42A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,10 +132,22 @@
 		C97BFDFC1D09C42A00F6D42A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C97BFDFD1D09C42A00F6D42A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C97BFDFE1D09C42A00F6D42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C97BFE001D09C42A00F6D42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C97BFE021D09C42A00F6D42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97BFE031D09C42A00F6D42A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97BFE041D09C42A00F6D42A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C97BFE341D09D00300F6D42A /* KSLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLoginView.h; sourceTree = "<group>"; };
+		C97BFE351D09D00300F6D42A /* KSLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLoginView.m; sourceTree = "<group>"; };
+		C97BFE361D09D00300F6D42A /* KSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLoginViewController.h; sourceTree = "<group>"; };
+		C97BFE371D09D00300F6D42A /* KSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLoginViewController.m; sourceTree = "<group>"; };
+		C97BFE381D09D00300F6D42A /* KSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSLoginViewController.xib; sourceTree = "<group>"; };
+		C97BFE3D1D09D07F00F6D42A /* fblogin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fblogin1.png; sourceTree = "<group>"; };
+		C97BFE401D09D2A400F6D42A /* KSFriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFriendDetailViewController.h; sourceTree = "<group>"; };
+		C97BFE411D09D2A400F6D42A /* KSFriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendDetailViewController.m; sourceTree = "<group>"; };
+		C97BFE421D09D2A400F6D42A /* KSFriendDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSFriendDetailViewController.xib; sourceTree = "<group>"; };
+		C97BFE441D09D2A400F6D42A /* KSFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFriendsViewController.h; sourceTree = "<group>"; };
+		C97BFE451D09D2A400F6D42A /* KSFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsViewController.m; sourceTree = "<group>"; };
+		C97BFE461D09D2A400F6D42A /* KSFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSFriendsViewController.xib; sourceTree = "<group>"; };
+		C97BFE4D1D09DA2500F6D42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C97BFE4F1D09DA2500F6D42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,6 +557,7 @@
 		C97BFDF51D09C42A00F6D42A /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				C97BFE3C1D09D07F00F6D42A /* Pictures */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -568,6 +589,7 @@
 		C97BFDF91D09C42A00F6D42A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C97BFE2D1D09CF9100F6D42A /* KSLoginViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -576,9 +598,8 @@
 			isa = PBXGroup;
 			children = (
 				C97BFDFB1D09C42A00F6D42A /* AppDelegate */,
+				C97BFE4B1D09DA2500F6D42A /* Base.lproj */,
 				C97BFDFE1D09C42A00F6D42A /* Assets.xcassets */,
-				C97BFDFF1D09C42A00F6D42A /* LaunchScreen.storyboard */,
-				C97BFE011D09C42A00F6D42A /* Main.storyboard */,
 				C97BFE031D09C42A00F6D42A /* Info.plist */,
 				C97BFE041D09C42A00F6D42A /* main.m */,
 			);
@@ -593,6 +614,69 @@
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
+		};
+		C97BFE2D1D09CF9100F6D42A /* KSLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C97BFE3F1D09D2A400F6D42A /* KSFriendDetailViewController */,
+				C97BFE431D09D2A400F6D42A /* KSFriendsViewController */,
+				C97BFE331D09D00300F6D42A /* KSLoginView */,
+				C97BFE361D09D00300F6D42A /* KSLoginViewController.h */,
+				C97BFE371D09D00300F6D42A /* KSLoginViewController.m */,
+				C97BFE381D09D00300F6D42A /* KSLoginViewController.xib */,
+			);
+			path = KSLoginViewController;
+			sourceTree = "<group>";
+		};
+		C97BFE331D09D00300F6D42A /* KSLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				C97BFE341D09D00300F6D42A /* KSLoginView.h */,
+				C97BFE351D09D00300F6D42A /* KSLoginView.m */,
+			);
+			path = KSLoginView;
+			sourceTree = "<group>";
+		};
+		C97BFE3C1D09D07F00F6D42A /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				C97BFE3D1D09D07F00F6D42A /* fblogin1.png */,
+			);
+			name = Pictures;
+			path = ../../../../IdapStudy/KSIdapStudy/KSIdapStudy/FBProject/Resourses/Pictures;
+			sourceTree = "<group>";
+		};
+		C97BFE3F1D09D2A400F6D42A /* KSFriendDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C97BFE401D09D2A400F6D42A /* KSFriendDetailViewController.h */,
+				C97BFE411D09D2A400F6D42A /* KSFriendDetailViewController.m */,
+				C97BFE421D09D2A400F6D42A /* KSFriendDetailViewController.xib */,
+			);
+			name = KSFriendDetailViewController;
+			path = KSTestFacebookProject/Sourse/UI/KSFriendDetailViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		C97BFE431D09D2A400F6D42A /* KSFriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C97BFE441D09D2A400F6D42A /* KSFriendsViewController.h */,
+				C97BFE451D09D2A400F6D42A /* KSFriendsViewController.m */,
+				C97BFE461D09D2A400F6D42A /* KSFriendsViewController.xib */,
+			);
+			name = KSFriendsViewController;
+			path = KSTestFacebookProject/Sourse/UI/KSFriendsViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		C97BFE4B1D09DA2500F6D42A /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				C97BFE4C1D09DA2500F6D42A /* LaunchScreen.storyboard */,
+				C97BFE4E1D09DA2500F6D42A /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = "KSTestFacebookProject/Supporting Files/Base.lproj";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -654,12 +738,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97BFE501D09DA2500F6D42A /* LaunchScreen.storyboard in Resources */,
+				C97BFE511D09DA2500F6D42A /* Main.storyboard in Resources */,
 				C97BFE251D09C42A00F6D42A /* KSLoadingView.xib in Resources */,
+				C97BFE3E1D09D07F00F6D42A /* fblogin1.png in Resources */,
+				C97BFE3B1D09D00300F6D42A /* KSLoginViewController.xib in Resources */,
 				C97BFE201D09C42A00F6D42A /* KSUserViewCell.xib in Resources */,
 				C97BFE281D09C42A00F6D42A /* Assets.xcassets in Resources */,
-				C97BFE2A1D09C42A00F6D42A /* Main.storyboard in Resources */,
-				C97BFE291D09C42A00F6D42A /* LaunchScreen.storyboard in Resources */,
+				C97BFE4A1D09D2A400F6D42A /* KSFriendsViewController.xib in Resources */,
 				C97BFE231D09C42A00F6D42A /* KSUserViewController.xib in Resources */,
+				C97BFE481D09D2A400F6D42A /* KSFriendDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,10 +807,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97BFE1D1D09C42A00F6D42A /* KSImageModel.m in Sources */,
+				C97BFE471D09D2A400F6D42A /* KSFriendDetailViewController.m in Sources */,
 				C97BFE171D09C42A00F6D42A /* KSArrayModel.m in Sources */,
 				C97BFE1A1D09C42A00F6D42A /* KSModel.m in Sources */,
 				C97BFE121D09C42A00F6D42A /* KSObserverObject.m in Sources */,
 				C97BFE271D09C42A00F6D42A /* AppDelegate.m in Sources */,
+				C97BFE3A1D09D00300F6D42A /* KSLoginViewController.m in Sources */,
 				C97BFE0C1D09C42A00F6D42A /* UIViewController+KSExtensions.m in Sources */,
 				C97BFE101D09C42A00F6D42A /* KSObserverArray.m in Sources */,
 				C97BFE261D09C42A00F6D42A /* KSView.m in Sources */,
@@ -739,11 +829,13 @@
 				C97BFE151D09C42A00F6D42A /* KSAlphabetRange.m in Sources */,
 				C97BFE0E1D09C42A00F6D42A /* KSDispatch.m in Sources */,
 				C97BFE181D09C42A00F6D42A /* KSArrayModelManager.m in Sources */,
+				C97BFE491D09D2A400F6D42A /* KSFriendsViewController.m in Sources */,
 				C97BFE241D09C42A00F6D42A /* KSLoadingView.m in Sources */,
 				C97BFE1C1D09C42A00F6D42A /* KSStringModel.m in Sources */,
 				C97BFE0D1D09C42A00F6D42A /* UIWindow+KSExtension.m in Sources */,
 				C97BFE131D09C42A00F6D42A /* KSAlphabet.m in Sources */,
 				C97BFE051D09C42A00F6D42A /* CGGeometry+KSExtensions.m in Sources */,
+				C97BFE391D09D00300F6D42A /* KSLoginView.m in Sources */,
 				C97BFE221D09C42A00F6D42A /* KSUserViewController.m in Sources */,
 				C97BFE081D09C42A00F6D42A /* NSObject+KSExtension.m in Sources */,
 				C97BFE0B1D09C42A00F6D42A /* UITableView+KSExtensions.m in Sources */,
@@ -757,18 +849,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C97BFDFF1D09C42A00F6D42A /* LaunchScreen.storyboard */ = {
+		C97BFE4C1D09DA2500F6D42A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C97BFE001D09C42A00F6D42A /* Base */,
+				C97BFE4D1D09DA2500F6D42A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		C97BFE011D09C42A00F6D42A /* Main.storyboard */ = {
+		C97BFE4E1D09DA2500F6D42A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C97BFE021D09C42A00F6D42A /* Base */,
+				C97BFE4F1D09DA2500F6D42A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

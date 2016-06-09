@@ -1,0 +1,23 @@
+//
+//  KSIOSProject-Prefix.pch
+//  KSIdapStudy
+//
+//  Created by KulikovS on 26.04.16.
+//  Copyright © 2016 KulikovS. All rights reserved.
+//
+
+#ifndef KSIOSProject_Prefix_pch
+#define KSIOSProject_Prefix_pch
+
+#import "UIViewController+KSExtensions.h"
+#import "CGGeometry+KSExtensions.h"
+#import "NSString+KSExtension.h"
+#import "KSMacro.h"
+#import "UIWindow+KSExtension.h"
+#import "UITableView+KSExtensions.h"
+#import "UINib+KSExtensions.h"
+#import "NSFileManager+KSExtensions.h"
+#import "NSBundle+KSExtensions.h"
+#import "KSDispatch.h"
+
+#endif /* KSIOSProject_Prefix_pch */

@@ -25,8 +25,6 @@
 
 - (void)dealloc {
     self.observers = nil;
-    
-    [super dealloc];
 }
 
 - (instancetype)init {

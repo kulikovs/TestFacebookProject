@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0702F32BEC8BED54E0029FA1 /* libPods-KSTestFacebookProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F0B69DB3BD6E6FF8176671 /* libPods-KSTestFacebookProject.a */; };
 		C97BFE051D09C42A00F6D42A /* CGGeometry+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFD931D09C42A00F6D42A /* CGGeometry+KSExtensions.m */; };
 		C97BFE061D09C42A00F6D42A /* NSBundle+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFD961D09C42A00F6D42A /* NSBundle+KSExtensions.m */; };
 		C97BFE071D09C42A00F6D42A /* NSFileManager+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFD991D09C42A00F6D42A /* NSFileManager+KSExtensions.m */; };
@@ -45,11 +46,13 @@
 		C97BFE281D09C42A00F6D42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97BFDFE1D09C42A00F6D42A /* Assets.xcassets */; };
 		C97BFE291D09C42A00F6D42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFDFF1D09C42A00F6D42A /* LaunchScreen.storyboard */; };
 		C97BFE2A1D09C42A00F6D42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE011D09C42A00F6D42A /* Main.storyboard */; };
-		C97BFE2B1D09C42A00F6D42A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE031D09C42A00F6D42A /* Info.plist */; };
 		C97BFE2C1D09C42A00F6D42A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE041D09C42A00F6D42A /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0168D474CCD15B198C83E109 /* Pods-KSTestFacebookProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSTestFacebookProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSTestFacebookProject/Pods-KSTestFacebookProject.release.xcconfig"; sourceTree = "<group>"; };
+		42F0B69DB3BD6E6FF8176671 /* libPods-KSTestFacebookProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSTestFacebookProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48054F454E05616DDCD126DF /* Pods-KSTestFacebookProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSTestFacebookProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSTestFacebookProject/Pods-KSTestFacebookProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C97BFD751D09BFAE00F6D42A /* KSTestFacebookProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSTestFacebookProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97BFD921D09C42A00F6D42A /* CGGeometry+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+KSExtensions.h"; sourceTree = "<group>"; };
 		C97BFD931D09C42A00F6D42A /* CGGeometry+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+KSExtensions.m"; sourceTree = "<group>"; };
@@ -132,17 +135,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0702F32BEC8BED54E0029FA1 /* libPods-KSTestFacebookProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FA42E26855DA3ED564DE6AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42F0B69DB3BD6E6FF8176671 /* libPods-KSTestFacebookProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7A514B66B887AE14FF5D0E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48054F454E05616DDCD126DF /* Pods-KSTestFacebookProject.debug.xcconfig */,
+				0168D474CCD15B198C83E109 /* Pods-KSTestFacebookProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C97BFD6C1D09BFAE00F6D42A = {
 			isa = PBXGroup;
 			children = (
 				C97BFD771D09BFAE00F6D42A /* KSTestFacebookProject */,
 				C97BFD761D09BFAE00F6D42A /* Products */,
+				C7A514B66B887AE14FF5D0E1 /* Pods */,
+				8FA42E26855DA3ED564DE6AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -578,9 +601,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97BFD8C1D09BFAE00F6D42A /* Build configuration list for PBXNativeTarget "KSTestFacebookProject" */;
 			buildPhases = (
+				F2BD974610170AC199F36819 /* [CP] Check Pods Manifest.lock */,
 				C97BFD711D09BFAE00F6D42A /* Sources */,
 				C97BFD721D09BFAE00F6D42A /* Frameworks */,
 				C97BFD731D09BFAE00F6D42A /* Resources */,
+				DB2543D0CAD3F3AE34338B19 /* [CP] Embed Pods Frameworks */,
+				807D406C8431E96AE8617D97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,11 +660,58 @@
 				C97BFE2A1D09C42A00F6D42A /* Main.storyboard in Resources */,
 				C97BFE291D09C42A00F6D42A /* LaunchScreen.storyboard in Resources */,
 				C97BFE231D09C42A00F6D42A /* KSUserViewController.xib in Resources */,
-				C97BFE2B1D09C42A00F6D42A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		807D406C8431E96AE8617D97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KSTestFacebookProject/Pods-KSTestFacebookProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2543D0CAD3F3AE34338B19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KSTestFacebookProject/Pods-KSTestFacebookProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2BD974610170AC199F36819 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C97BFD711D09BFAE00F6D42A /* Sources */ = {
@@ -787,9 +860,13 @@
 		};
 		C97BFD8D1D09BFAE00F6D42A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48054F454E05616DDCD126DF /* Pods-KSTestFacebookProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = KSTestFacebookProject/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/kulikovs/Documents/Lessons/TestFacebookProject/KSTestFacebookProject/KSTestFacebookProject/Library/KSProject-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/KSTestFacebookProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KS.KSTestFacebookProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -798,9 +875,13 @@
 		};
 		C97BFD8E1D09BFAE00F6D42A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0168D474CCD15B198C83E109 /* Pods-KSTestFacebookProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = KSTestFacebookProject/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/kulikovs/Documents/Lessons/TestFacebookProject/KSTestFacebookProject/KSTestFacebookProject/Library/KSProject-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/KSTestFacebookProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KS.KSTestFacebookProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -826,6 +907,7 @@
 				C97BFD8E1D09BFAE00F6D42A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -38,7 +38,7 @@
         [string appendString:[NSString stringWithFormat:@"%c", (unichar)index]];
     }
     
-    return [[string copy] autorelease];
+    return [string copy];
 }
 
 - (NSUInteger)count {

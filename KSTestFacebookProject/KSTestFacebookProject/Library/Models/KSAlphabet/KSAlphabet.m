@@ -20,45 +20,37 @@
 #pragma mark Class Methods
 
 + (instancetype)alphabetWithCharacterRange:(unichar)firstValue lastValue:(unichar)lastValue {
-    return [[[[self class] alloc] initWithRange:NSMakeRange(firstValue, lastValue - firstValue + 1)] autorelease];
+    return [[[self class] alloc] initWithRange:NSMakeRange(firstValue, lastValue - firstValue + 1)];
 }
 
 + (instancetype)alphabetWithString:(NSString *)string {
-    return [[[[self class] alloc] initWithString:string] autorelease];
+    return [[[self class] alloc] initWithString:string];
 }
 
 + (instancetype)alphabetWithRange:(NSRange)range {
-    return [[[[self class] alloc] initWithRange:range] autorelease];
+    return [[[self class] alloc] initWithRange:range];
 }
 
 + (instancetype)alphabetWithAlphabetsArray:(NSArray *)alphabets {
-    return [[[[self class] alloc] initWithAlphabetsArray:alphabets] autorelease];
+    return [[[self class] alloc] initWithAlphabetsArray:alphabets];
 }
 
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
 - (instancetype)initWithRange:(NSRange)range {
-    [self autorelease];
-    
     return [[KSAlphabetRange alloc] initWithRange:range];
 }
 
 - (instancetype)initWithString:(NSString *)string {
-    [self autorelease];
-    
     return [[KSAlphabetString alloc] initWithString:string];
 }
 
 - (instancetype)initWithCharacterRange:(unichar)firstValue lastValue:(unichar)lastValue {
-    [self autorelease];
-    
     return [[KSAlphabetRange alloc] initWithRange:NSMakeRange(firstValue, lastValue - firstValue + 1)];
 }
 
 - (instancetype)initWithAlphabetsArray:(NSArray *)alphabets {
-    [self autorelease];
-    
     return [[KSAlphabetCluster alloc] initWithAlphabetsArray:alphabets];
 }
 
@@ -88,43 +80,6 @@
     return self.alphabetString.length;
 }
 
-#pragma mark -
-#pragma mark Public Methods
 
-
-- (NSString *)objectAtIndex:(NSUInteger)index {
-    return [self objectAtIndexedSubscript:index];
-}
-
-- (NSString *)stringAtIndex:(NSUInteger)index {
-    return [self objectAtIndexedSubscript:index];
-}
-
-
-- (NSString *)objectAtIndexedSubscript:(NSUInteger)indeх {
-    return [NSString stringWithFormat:@"%c", [self.alphabetString characterAtIndex:indeх]];
-}
-
-#pragma mark -
-#pragma mark NSFastEnumeration
-
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
-                                  objects:(id [])buffer
-                                    count:(NSUInteger)lenght
-{
-    state->mutationsPtr = (unsigned long *)self;
-    NSUInteger stateCount = state->state;
-    NSUInteger resultCount = MIN(self.count - stateCount, lenght);
-    NSUInteger finalCount = stateCount + resultCount;
-    
-    for (NSUInteger index = stateCount; index < finalCount; index++) {
-        buffer[index - stateCount] = self[index];
-    }
-    
-    state->state = finalCount;
-    state->itemsPtr = buffer;
-    
-    return resultCount;
-}
 
 @end

@@ -21,8 +21,6 @@
 
 - (void)dealloc {
     self.handlersArray = nil;
-    
-    [super dealloc];
 }
 
 - (instancetype)init {
@@ -38,20 +36,20 @@
 #pragma mark Accessors
 
 - (NSArray *)handlers {
-    return [[self.handlersArray copy] autorelease];
+    return [self.handlersArray copy];
 }
 
 #pragma mark -
 #pragma mark Public Methods
 
 - (void)addHandler:(KSHandlerObject)handler forObject:(id)object {
-    KSObserverObject *observerObject = [[[KSObserverObject alloc] initWithObject:object
-                                                                         handler:handler] autorelease];
+    KSObserverObject *observerObject = [[KSObserverObject alloc] initWithObject:object
+                                                                         handler:handler];
     [self.handlersArray addObject:observerObject];
 }
 
 - (void)removeHandlersForObject:(id)object {
-    NSArray *objects = [[self.handlers copy] autorelease];
+    NSArray *objects = [self.handlers copy];
     for (KSObserverObject *observerObject in objects) {
         if (observerObject.object == object) {
             [self.handlersArray removeObject:observerObject];

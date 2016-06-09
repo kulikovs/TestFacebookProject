@@ -22,7 +22,7 @@
 #pragma mark Class Methods
 
 + (instancetype)dictionaryWithState:(NSUInteger)state {
-    return [[[self alloc] initWithState:state] autorelease];
+    return [[self alloc] initWithState:state];
 }
 
 #pragma mark -
@@ -31,8 +31,6 @@
 - (void)dealloc {
     [self.observerArray removeAllHandlers];
     self.observerArray = nil;
-    
-    [super dealloc];
 }
 
 - (instancetype)init {
@@ -42,7 +40,7 @@
 - (instancetype)initWithState:(NSUInteger)state {
     self = [super init];
     if (self) {
-        self.observerArray = [[[KSObserverArray alloc] init] autorelease];
+        self.observerArray = [[KSObserverArray alloc] init];
         self.state = state;
     }
     
@@ -60,7 +58,7 @@
         [handlers addObject:object.handler];
     }
     
-    return [[handlers copy] autorelease];
+    return [handlers copy];
 }
 
 #pragma mark -

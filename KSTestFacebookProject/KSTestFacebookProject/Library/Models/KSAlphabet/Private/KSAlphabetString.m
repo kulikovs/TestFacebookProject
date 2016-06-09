@@ -19,16 +19,10 @@
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
-- (void)dealloc {
-    self.stringAlphabet = nil;
-    
-    [super dealloc];
-}
-
 - (instancetype)initWithString:(NSString *)string {
     self = [super init];
     if (self) {
-        self.stringAlphabet = [[string copy] autorelease];
+        self.stringAlphabet = [string copy];
     }
     
     return self;

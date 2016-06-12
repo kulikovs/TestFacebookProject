@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class KSUser;
+
 @interface KSFriendDetailViewController : UIViewController
+@property (nonatomic, strong) KSUser *user;
 
 @end

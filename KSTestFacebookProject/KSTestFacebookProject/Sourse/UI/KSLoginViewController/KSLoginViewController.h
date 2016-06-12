@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface KSLoginViewController : UIViewController
+
 - (IBAction)onClickLoginButton:(id)sender;
 
 @end

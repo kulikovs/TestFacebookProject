@@ -7,16 +7,32 @@
 //
 
 #import "KSFriendDetailViewController.h"
+#import "KSFriendsDetailView.h"
+#import "KSUser.h"
 
 @interface KSFriendDetailViewController ()
+@property (nonatomic, readonly) KSFriendsDetailView *rootView;
 
 @end
 
 @implementation KSFriendDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
 
+#pragma mark -
+#pragma mark Accessors
+
+KSRootViewAndReturnNilMacro(KSFriendsDetailView);
+
+
+- (void)setUser:(KSUser *)user {
+
+}
+
+#pragma mark -
+#pragma mark View LifeCycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 @end

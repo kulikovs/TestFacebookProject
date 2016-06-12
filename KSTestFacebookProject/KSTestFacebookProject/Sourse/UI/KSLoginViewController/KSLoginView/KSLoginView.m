@@ -6,6 +6,8 @@
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
 #import "KSLoginView.h"
 
 @implementation KSLoginView

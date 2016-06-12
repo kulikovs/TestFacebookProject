@@ -7,7 +7,6 @@
 //
 
 #import "KSView.h"
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface KSLoginView : KSView
 @property (nonatomic, strong) IBOutlet UIButton *loginButton;

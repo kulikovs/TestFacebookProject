@@ -1,13 +1,13 @@
 //
-//  KSIOSProject-Prefix.pch
-//  KSIdapStudy
+//  KSExtentionsLibraryImport.h
+//  KSTestFacebookProject
 //
-//  Created by KulikovS on 26.04.16.
+//  Created by KulikovS on 10.06.16.
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 
-#ifndef KSIOSProject_Prefix_pch
-#define KSIOSProject_Prefix_pch
+#ifndef KSExtentionsLibraryImporting_h
+#define KSExtentionsLibraryImporting_h
 
 #import "UIViewController+KSExtensions.h"
 #import "CGGeometry+KSExtensions.h"
@@ -20,4 +20,4 @@
 #import "NSBundle+KSExtensions.h"
 #import "KSDispatch.h"
 
-#endif /* KSIOSProject_Prefix_pch */
+#endif /* KSExtentionsLibraryImporting_h */

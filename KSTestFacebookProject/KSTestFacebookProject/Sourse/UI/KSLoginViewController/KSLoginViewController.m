@@ -6,9 +6,16 @@
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 #import "KSLoginViewController.h"
 #import "KSLoginView.h"
 #import "KSFriendsViewController.h"
+#import "KSUser.h"
+#import "KSUserContext.h"
+
+#define kKSLogInPermissions @[@"public_profile", @"email", @"user_friends"]
 
 @interface KSLoginViewController ()
 @property (nonatomic, readonly) KSLoginView *rootView;
@@ -16,7 +23,6 @@
 @end
 
 @implementation KSLoginViewController
-
 
 #pragma mark -
 #pragma mark Accessors
@@ -32,19 +38,16 @@ KSRootViewAndReturnNilMacro(KSLoginView);
      self.rootView.loginButton = [[FBSDKLoginButton alloc] init];
 }
 
-
 - (IBAction)onClickLoginButton:(id)sender {
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-    [login logInWithReadPermissions: @[@"public_profile", @"email", @"user_friends"]
+    [login logInWithReadPermissions:kKSLogInPermissions
      fromViewController:self
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-         if (error) {
-             NSLog(@"Process error");
-         } else if (result.isCancelled) {
-             NSLog(@"Cancelled");
-         } else {
-             NSLog(@"Logged in");
-             [self.navigationController pushViewController:[KSFriendsViewController new] animated:YES];
+         if (!error && result.token) {
+            KSFriendsViewController *friendsViewControler = [KSFriendsViewController new];
+             KSUser *user = [[KSUser alloc] initWithID:result.token.userID isLogedIn:YES];
+             friendsViewControler.user = user;
+             [self.navigationController pushViewController:friendsViewControler animated:YES];
          }
      }];
 }

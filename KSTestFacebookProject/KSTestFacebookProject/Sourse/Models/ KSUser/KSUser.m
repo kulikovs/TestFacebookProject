@@ -59,6 +59,10 @@
     [self.friendsArray addObjectsFromArray:friends];
 }
 
+- (void)replaceFriends:(NSArray *)friends {
+    [self.friendsArray setArray:friends];
+}
+
 - (void)removeObject:(KSUser *)user {
     [self.friendsArray removeObject:user];
 }

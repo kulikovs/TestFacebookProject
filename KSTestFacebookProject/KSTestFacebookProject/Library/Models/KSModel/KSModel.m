@@ -41,6 +41,8 @@
     
     self.state = kKSModelStateLoading;
     
+    [self setUpLoading];
+    
     KSWeakifySelf;
     KSDispatchAsyncInBackground(^ {
         KSStrongifySelfWithClass(KSModel)

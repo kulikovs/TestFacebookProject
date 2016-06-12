@@ -11,20 +11,12 @@
 
 #import "KSUserContext.h"
 #import "KSUser.h"
-
-static NSString * const kKSFriendsKey       = @"friends.data";
-static NSString * const kKSUserIDKey        = @"id";
-static NSString * const kKSFirstNameKey     = @"first_name";
-static NSString * const kKSLastNameKey      = @"last_name";
-static NSString * const kKSPictureURLKey    = @"picture.data.url";
-
-#define kKSRequestParameters @{@"fields": @"friends{first_name,last_name,gender,picture}"}
+#import "KSFacebookConstants.h"
 
 @interface KSUserContext ()
-@property (nonatomic, retain) KSUser *user;
 
-- (void)parsingFromResultArray:(NSArray *)resultArray;
-
+//- (void)parsingFromResultArray:(NSArray *)resultArray;
+- (void)parsingFromResult:(id)result;
 @end
 
 @implementation KSUserContext
@@ -47,35 +39,58 @@ static NSString * const kKSPictureURLKey    = @"picture.data.url";
 - (void)performWork {
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:self.user.ID
                                                                    parameters:kKSRequestParameters
-                                                                   HTTPMethod:@"GET"];
+                                                                   HTTPMethod:kKSHTTPMethod];
     
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
                                           id result,
                                           NSError *error)
      {
-         [self parsingFromResultArray:[result valueForKeyPath:kKSFriendsKey]];
+       //  [self parsingFromResultArray:[result valueForKeyPath:kKSFriendsKey]];
+         [self parsingFromResult:result];
          [self.user setState:kKSUserStateLoaded withObject:nil];
      }];
 }
 
+//- (void) finishLoading {
+//    self.state = kKSModelStateLoading;
+//}
+
 #pragma mark -
 #pragma mark Private methods
 
-- (void)parsingFromResultArray:(NSArray *)resultArray {
-    NSMutableArray *friendsArray = [NSMutableArray array];
+- (void)parsingFromResult:(id)result {
+    NSArray *array = [result valueForKeyPath:kKSFriendsKey];
+        NSMutableArray *friendsArray = [NSMutableArray array];
     
-    for (NSDictionary *dictionary in resultArray) {
-        NSString *id = [dictionary  valueForKey:kKSUserIDKey];
-        KSUser *user = [[KSUser alloc] initWithID:id isLogedIn:NO];
-        
-        user.firstName = [dictionary valueForKey:kKSFirstNameKey];
-        user.lastName = [dictionary valueForKey:kKSLastNameKey];
-        user.URLStringSmallImage = [dictionary valueForKeyPath:kKSPictureURLKey];
-        
-        [friendsArray addObject:user];
-    }
+        for (NSDictionary *dictionary in array) {
+            NSString *id = [dictionary  valueForKey:kKSUserIDKey];
+            KSUser *user = [[KSUser alloc] initWithID:id isLogedIn:NO];
     
-    [self.user addFriends:friendsArray];
+            user.firstName = [dictionary valueForKey:kKSFirstNameKey];
+            user.lastName = [dictionary valueForKey:kKSLastNameKey];
+            user.URLStringSmallImage = [dictionary valueForKeyPath:kKSPictureURLKey];
+    
+            [friendsArray addObject:user];
+        }
+    
+        [self.user replaceFriends:friendsArray];
 }
+
+//- (void)parsingFromResultArray:(NSArray *)resultArray {
+//    NSMutableArray *friendsArray = [NSMutableArray array];
+//    
+//    for (NSDictionary *dictionary in resultArray) {
+//        NSString *id = [dictionary  valueForKey:kKSUserIDKey];
+//        KSUser *user = [[KSUser alloc] initWithID:id isLogedIn:NO];
+//        
+//        user.firstName = [dictionary valueForKey:kKSFirstNameKey];
+//        user.lastName = [dictionary valueForKey:kKSLastNameKey];
+//        user.URLStringSmallImage = [dictionary valueForKeyPath:kKSPictureURLKey];
+//        
+//        [friendsArray addObject:user];
+//    }
+//    
+//    [self.user replaceFriends:friendsArray];
+//}
 
 @end

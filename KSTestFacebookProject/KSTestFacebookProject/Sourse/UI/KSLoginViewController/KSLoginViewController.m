@@ -52,5 +52,4 @@ KSRootViewAndReturnNilMacro(KSLoginView);
      }];
 }
 
-
 @end

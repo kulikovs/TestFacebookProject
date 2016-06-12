@@ -9,11 +9,14 @@
 #import "KSView.h"
 
 @class KSImageView;
+@class KSUser;
 
 @interface KSFriendsDetailView : KSView
 @property (nonatomic, strong) IBOutlet UILabel      *firstName;
 @property (nonatomic, strong) IBOutlet UILabel      *lastName;
 @property (nonatomic, strong) IBOutlet UILabel      *gender;
-@property (nonatomic, strong) IBOutlet KSImageView *largePhoto;
+@property (nonatomic, strong) IBOutlet KSImageView  *largePhoto;
+
+- (void)fillWithUser:(KSUser *)user;
 
 @end

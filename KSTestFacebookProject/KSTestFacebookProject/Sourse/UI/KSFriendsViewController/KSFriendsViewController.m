@@ -48,6 +48,7 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 #pragma mark Private Methods
 
 - (void)load {
+    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
     KSUserContext *context = [[KSUserContext alloc] initWithUser:self.user];
     [context performWork];
 }
@@ -55,14 +56,9 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 #pragma mark -
 #pragma mark View LifeCycle
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-       [self load];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
+    [self load];
 }
 
 #pragma mark -
@@ -78,7 +74,6 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
     
     return cell;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

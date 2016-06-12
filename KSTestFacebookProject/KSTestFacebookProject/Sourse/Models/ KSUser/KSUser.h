@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, kKSUserState) {
 
 - (void)addFriend:(KSUser *)friend;
 - (void)addFriends:(NSArray *)friends;
+- (void)replaceFriends:(NSArray *)friends;
 - (void)removeObject:(KSUser *)user;
 - (void)removeAllObject;
 

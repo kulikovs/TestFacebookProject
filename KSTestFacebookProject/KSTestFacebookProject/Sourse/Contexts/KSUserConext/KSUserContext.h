@@ -11,6 +11,7 @@
 @class KSUser;
 
 @interface KSUserContext : NSObject
+@property (nonatomic, retain) KSUser *user;
 
 - (instancetype)initWithUser:(KSUser *)user;
 - (void)performWork;

@@ -31,11 +31,10 @@
     return self;
 }
 
-- (instancetype)initWithID:(NSString *)ID isLogedIn:(BOOL)isLogedIn {
+- (instancetype)initWithID:(NSString *)ID {
     self = [self init];
     if (self) {
         self.ID = ID;
-        self.isLogedIn = isLogedIn;
     }
     
     return self;

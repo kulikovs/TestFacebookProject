@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class KSUser;
-@class KSUserContext;
+@class KSFriendsContext;
 
 @interface KSFriendsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) KSUser        *user;
+@property (nonatomic, strong) KSFriendsContext *friendsContext;
+@property (nonatomic, strong) KSUser            *user;
 
 @end

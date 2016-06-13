@@ -10,14 +10,12 @@
 #import "KSFriendDetailViewController.h"
 #import "KSFriendsView.h"
 #import "KSUser.h"
-#import "KSUserContext.h"
+#import "KSFriendsContext.h"
 #import "KSUserViewCell.h"
 #import "KSStateModel.h"
 
 @interface KSFriendsViewController ()
 @property (nonatomic, readonly) KSFriendsView *rootView;
-
--(void)load;
 
 @end
 
@@ -39,26 +37,31 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
             [rootView.tableView reloadData];
             [rootView removeLoadingViewAnimated:YES];
         }
-                    state:kKSUserStateLoaded
+                    state:kKSModelStateLoaded
                    object:self];
+        
+        self.friendsContext = [[KSFriendsContext alloc] initWithUser:self.user];
     }
 }
 
-#pragma mark -
-#pragma mark Private Methods
-
-- (void)load {
-    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
-    KSUserContext *context = [[KSUserContext alloc] initWithUser:self.user];
-    [context performWork];
+- (void)setFriendsContext:(KSFriendsContext *)friendsContext {
+    if (_friendsContext != friendsContext) {
+        [_friendsContext cancel];
+        _friendsContext = friendsContext;
+        if (_friendsContext) {
+            [_friendsContext execute];
+        }
+    }
 }
 
 #pragma mark -
 #pragma mark View LifeCycle
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self load];
+    if (self.user.state != kKSModelStateLoaded) {
+        [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
+    }
 }
 
 #pragma mark -

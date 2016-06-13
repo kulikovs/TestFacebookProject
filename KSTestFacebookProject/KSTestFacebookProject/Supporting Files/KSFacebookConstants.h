@@ -18,6 +18,10 @@ static NSString * const kKSPictureURLKey    = @"picture.data.url";
 static NSString * const kKSHTTPMethod       = @"GET";
 static NSString * const kKSLargePictureURL  = @"https://graph.facebook.com/%@/picture?type=large";
 
-#define kKSRequestParameters @{@"fields": @"friends{first_name,last_name,gender,picture}"}
+#define kKSFriendsRequestParameters @{@"fields": @"friends{first_name,last_name,gender,picture}"}
+#define kKSUserRequestParameters    @{@"fields": @"id,first_name,last_name,gender,friends"}
+
+#define kKSLogInPermissions         @[@"public_profile", @"email", @"user_friends"]
+
 
 #endif /* KSFacebookConstants_h */

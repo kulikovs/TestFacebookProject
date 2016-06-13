@@ -13,7 +13,8 @@
 #import "KSStateModel.h"
 
 @interface KSFriendDetailViewController ()
-@property (nonatomic, readonly) KSFriendsDetailView *rootView;
+@property (nonatomic, readonly) KSFriendsDetailView     *rootView;
+@property (nonatomic, strong)   KSFriendDetailContext   *detailContext;
 
 @end
 
@@ -32,10 +33,23 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
         [_user addHandler:^(KSStateModel *object) {
             KSStrongifySelfWithClass(KSFriendDetailViewController);
             KSFriendsDetailView *rootView = strongSelf.rootView;
-            [rootView removeLoadingViewAnimated:YES];
+            [strongSelf.rootView fillWithUser:strongSelf.user];
+            [rootView removeLoadingViewAnimated:NO];
         }
-                    state:kKSUserStateLoaded
+                    state:kKSModelStateLoaded
                    object:self];
+        
+      self.detailContext = [[KSFriendDetailContext alloc] initWithUser:_user];
+    }
+}
+
+- (void)setDetailContext:(KSFriendDetailContext *)detailContext {
+    if (_detailContext != detailContext) {
+        [_detailContext cancel];
+        _detailContext = detailContext;
+        if (_detailContext) {
+            [_detailContext execute];
+        }
     }
 }
 
@@ -45,7 +59,7 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 - (void)load {
     [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
     KSFriendDetailContext *context = [[KSFriendDetailContext alloc] initWithUser:self.user];
-    [context performWork];
+    [context execute];
     [self.rootView fillWithUser:self.user];
 }
 

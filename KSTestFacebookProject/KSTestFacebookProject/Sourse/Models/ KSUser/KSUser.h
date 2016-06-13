@@ -11,13 +11,7 @@
 
 @class KSImageView;
 
-typedef NS_ENUM(NSUInteger, kKSUserState) {
-    kKSUserStateUndefined,
-    kKSUserStateLoaded,
-    kKSUserStateFailed,
-};
-
-@interface KSUser : KSObserver
+@interface KSUser : KSModel
 @property (nonatomic, copy)     NSString        *ID;
 @property (nonatomic, copy)     NSString        *firstName;
 @property (nonatomic, copy)     NSString        *lastName;
@@ -28,7 +22,7 @@ typedef NS_ENUM(NSUInteger, kKSUserState) {
 @property (nonatomic, readonly) NSArray         *friends;
 @property (nonatomic, assign)   BOOL            isLogedIn;
 
-- (instancetype)initWithID:(NSString *)ID isLogedIn:(BOOL)isLogedIn;
+- (instancetype)initWithID:(NSString *)ID;
 
 - (void)addFriend:(KSUser *)friend;
 - (void)addFriends:(NSArray *)friends;

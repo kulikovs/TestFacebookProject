@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSTestFacebookProject/Sourse/UI/KSFriendDetailViewController/KSFriendsDetailView/KSFriendsDetailView.m"
-            timestampString = "487445440.197411"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "-fillWithUser:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "KSTestFacebookProject/Sourse/Contexts/KSUserConext/KSUserContext.m"
             timestampString = "487449657.165206"
             startingColumnNumber = "9223372036854775807"
@@ -57,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSTestFacebookProject/Sourse/UI/KSFriendsViewController/KSFriendsViewController.m"
-            timestampString = "487448115.996602"
+            filePath = "KSTestFacebookProject/Sourse/Contexts/KSUserConext/KSFriendDetailContext/KSFriendDetailContext.m"
+            timestampString = "487449912.146875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-parsingFromResult:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +57,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSTestFacebookProject/Sourse/Contexts/KSUserConext/KSFriendDetailContext/KSFriendDetailContext.m"
-            timestampString = "487449912.146875"
+            filePath = "KSTestFacebookProject/Sourse/UI/KSFriendDetailViewController/KSFriendsDetailView/KSFriendsDetailView.m"
+            timestampString = "487530769.811342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-parsingFromResult:"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-fillWithUser:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KSTestFacebookProject/Library/Models/KSObserver/KSObserver.m"
+            timestampString = "487530702.641302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-setState:withObject:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

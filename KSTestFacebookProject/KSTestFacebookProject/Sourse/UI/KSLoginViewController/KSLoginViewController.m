@@ -13,9 +13,7 @@
 #import "KSLoginView.h"
 #import "KSFriendsViewController.h"
 #import "KSUser.h"
-#import "KSUserContext.h"
-
-#define kKSLogInPermissions @[@"public_profile", @"email", @"user_friends"]
+#import "KSFacebookConstants.h"
 
 @interface KSLoginViewController ()
 @property (nonatomic, readonly) KSLoginView *rootView;
@@ -30,13 +28,7 @@
 KSRootViewAndReturnNilMacro(KSLoginView);
 
 #pragma mark -
-#pragma mark View LifeCycle
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
-     self.rootView.loginButton = [[FBSDKLoginButton alloc] init];
-}
+#pragma mark Handling
 
 - (IBAction)onClickLoginButton:(id)sender {
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
@@ -45,7 +37,8 @@ KSRootViewAndReturnNilMacro(KSLoginView);
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (!error && result.token) {
             KSFriendsViewController *friendsViewControler = [KSFriendsViewController new];
-             KSUser *user = [[KSUser alloc] initWithID:result.token.userID isLogedIn:YES];
+             KSUser *user = [[KSUser alloc] initWithID:result.token.userID];
+             user.isLogedIn = YES;
              friendsViewControler.user = user;
              [self.navigationController pushViewController:friendsViewControler animated:YES];
          }

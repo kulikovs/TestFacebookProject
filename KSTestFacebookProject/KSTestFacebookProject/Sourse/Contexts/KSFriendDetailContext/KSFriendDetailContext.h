@@ -6,10 +6,10 @@
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 
-#import "KSUserContext.h"
+#import "KSFacebookContext.h"
 
-@interface KSFriendDetailContext : KSUserContext
+@interface KSFriendDetailContext : KSFacebookContext
 
-//- (void)parsingFromResultArray:(NSArray *)resultArray;
 - (void)parsingFromResult:(id)result;
+
 @end

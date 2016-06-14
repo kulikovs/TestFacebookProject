@@ -22,6 +22,8 @@
 
 @implementation KSLoginViewController
 
+@dynamic rootView;
+
 #pragma mark -
 #pragma mark Accessors
 
@@ -40,6 +42,7 @@ KSRootViewAndReturnNilMacro(KSLoginView);
              KSUser *user = [[KSUser alloc] initWithID:result.token.userID];
              user.isLogedIn = YES;
              friendsViewControler.user = user;
+             
              [self.navigationController pushViewController:friendsViewControler animated:YES];
          }
      }];

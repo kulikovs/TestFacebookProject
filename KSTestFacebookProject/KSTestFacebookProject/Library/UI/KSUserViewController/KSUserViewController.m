@@ -44,6 +44,15 @@ KSRootViewAndReturnNilMacro(KSUserView);
 }
 
 #pragma mark -
+#pragma mark View LifeCycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self load];
+}
+
+#pragma mark -
 #pragma mark Private Methods
 
 - (void)load {
@@ -80,15 +89,6 @@ KSRootViewAndReturnNilMacro(KSUserView);
         [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                          withRowAnimation:UITableViewRowAnimationLeft];
     }
-}
-
-#pragma mark -
-#pragma mark View LifeCycle
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self load];
 }
 
 #pragma mark -

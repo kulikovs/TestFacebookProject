@@ -26,8 +26,6 @@
 #pragma mark Public methods
 
 - (void)parsingFromResult:(id)result {
-    self.user.firstName = [result  valueForKey:kKSFirstNameKey];
-    self.user.lastName = [result valueForKey:kKSLastNameKey];
     self.user.gender = [result  valueForKey:kKSUserGenderKey];    
 }
 

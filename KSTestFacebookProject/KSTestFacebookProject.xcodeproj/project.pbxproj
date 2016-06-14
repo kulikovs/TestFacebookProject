@@ -58,7 +58,6 @@
 		C97BFE391D09D00300F6D42A /* KSLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE351D09D00300F6D42A /* KSLoginView.m */; };
 		C97BFE3A1D09D00300F6D42A /* KSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE371D09D00300F6D42A /* KSLoginViewController.m */; };
 		C97BFE3B1D09D00300F6D42A /* KSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE381D09D00300F6D42A /* KSLoginViewController.xib */; };
-		C97BFE3E1D09D07F00F6D42A /* fblogin1.png in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE3D1D09D07F00F6D42A /* fblogin1.png */; };
 		C97BFE501D09DA2500F6D42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE4C1D09DA2500F6D42A /* LaunchScreen.storyboard */; };
 		C97BFE511D09DA2500F6D42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97BFE4E1D09DA2500F6D42A /* Main.storyboard */; };
 		C97BFE581D09FCEA00F6D42A /* KSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFE571D09FCEA00F6D42A /* KSUser.m */; };
@@ -165,7 +164,6 @@
 		C97BFE361D09D00300F6D42A /* KSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLoginViewController.h; sourceTree = "<group>"; };
 		C97BFE371D09D00300F6D42A /* KSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLoginViewController.m; sourceTree = "<group>"; };
 		C97BFE381D09D00300F6D42A /* KSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSLoginViewController.xib; sourceTree = "<group>"; };
-		C97BFE3D1D09D07F00F6D42A /* fblogin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fblogin1.png; sourceTree = "<group>"; };
 		C97BFE4D1D09DA2500F6D42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C97BFE4F1D09DA2500F6D42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		C97BFE561D09FCEA00F6D42A /* KSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUser.h; sourceTree = "<group>"; };
@@ -738,7 +736,6 @@
 		C97BFE3C1D09D07F00F6D42A /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				C97BFE3D1D09D07F00F6D42A /* fblogin1.png */,
 			);
 			name = Pictures;
 			path = ../../../../IdapStudy/KSIdapStudy/KSIdapStudy/FBProject/Resourses/Pictures;
@@ -828,7 +825,6 @@
 				C9511C5A1D0B342F0028870C /* iOS Study Plan.txt in Resources */,
 				C97BFE251D09C42A00F6D42A /* KSLoadingView.xib in Resources */,
 				C96EE9731D0C7E0D007690E0 /* KSUserViewCell.xib in Resources */,
-				C97BFE3E1D09D07F00F6D42A /* fblogin1.png in Resources */,
 				C97BFE3B1D09D00300F6D42A /* KSLoginViewController.xib in Resources */,
 				C9511C501D0AEC170028870C /* KSFriendsViewController.xib in Resources */,
 				C97BFE281D09C42A00F6D42A /* Assets.xcassets in Resources */,

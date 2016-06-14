@@ -16,10 +16,14 @@
 
 @interface KSFriendsViewController ()
 @property (nonatomic, readonly) KSFriendsView *rootView;
+@property (nonatomic, readonly) NSArray       *userFriends;
 
 @end
 
 @implementation KSFriendsViewController
+
+@dynamic rootView;
+@dynamic userFriends;
 
 #pragma mark -
 #pragma mark Accessors
@@ -48,10 +52,12 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
     if (_friendsContext != friendsContext) {
         [_friendsContext cancel];
         _friendsContext = friendsContext;
-        if (_friendsContext) {
-            [_friendsContext execute];
-        }
+        [_friendsContext execute];
     }
+}
+
+- (NSArray *)userFriends {
+   return self.user.friends;
 }
 
 #pragma mark -
@@ -68,12 +74,12 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 #pragma mark UITableViewDataSource Protocol
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.user.friends.count;
+    return self.userFriends.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     KSUserViewCell *cell = [tableView dequeueReusableCellFromNibWithClass:[KSUserViewCell class]];
-    [cell fillWithUser:self.user.friends[indexPath.row]];
+    [cell fillWithUser:self.userFriends[indexPath.row]];
     
     return cell;
 }
@@ -82,9 +88,9 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     KSFriendDetailViewController * controller = [KSFriendDetailViewController new];
-    controller.user = self.user.friends[indexPath.row];
+    controller.user = self.userFriends[indexPath.row];
+    
     [self.navigationController pushViewController:controller animated:YES];
 }
-
 
 @end

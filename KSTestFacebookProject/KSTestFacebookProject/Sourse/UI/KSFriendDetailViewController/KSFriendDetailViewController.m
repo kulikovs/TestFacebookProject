@@ -20,6 +20,8 @@
 
 @implementation KSFriendDetailViewController
 
+@dynamic rootView;
+
 #pragma mark -
 #pragma mark Accessors
 
@@ -47,20 +49,8 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
     if (_detailContext != detailContext) {
         [_detailContext cancel];
         _detailContext = detailContext;
-        if (_detailContext) {
-            [_detailContext execute];
-        }
+        [_detailContext execute];
     }
-}
-
-#pragma mark -
-#pragma mark Private Methods
-
-- (void)load {
-    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
-    KSFriendDetailContext *context = [[KSFriendDetailContext alloc] initWithUser:self.user];
-    [context execute];
-    [self.rootView fillWithUser:self.user];
 }
 
 #pragma mark -
@@ -70,6 +60,13 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
     [super viewWillAppear:animated];
     
     [self load];
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (void)load {
+    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
 }
 
 @end

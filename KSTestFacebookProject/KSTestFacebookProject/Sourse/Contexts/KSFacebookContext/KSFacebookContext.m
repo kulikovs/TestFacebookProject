@@ -35,15 +35,6 @@
 #pragma mark -
 #pragma mark Accessors
 
-- (void)setRequestConnections:(FBSDKGraphRequestConnection *)requestConnections {
-    if (_requestConnections != requestConnections) {
-        [_requestConnections cancel];
-        
-        _requestConnections = requestConnections;
-        [_requestConnections start];
-    }
-}
-
 - (NSDictionary *)requestParameters {
     return kKSFriendsRequestParameters;
 }
@@ -52,17 +43,21 @@
 #pragma mark Public Methods
 
 - (void)execute {
-   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:self.user.ID
-                                      parameters:self.requestParameters
-                                      HTTPMethod:kKSHTTPMethod];
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:self.user.ID
+                                                                   parameters:self.requestParameters
+                                                                   HTTPMethod:kKSHTTPMethod];
     
     self.requestConnections = [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                          id result,
-                                          NSError *error)
-     {
-         [self parsingFromResult:result];
-         [self.user setState:kKSModelStateLoaded withObject:nil];
-     }];
+                                                                    id result,
+                                                                    NSError *error)
+                               {
+                                   if (error) {
+                                       [self.user setState:kKSModelStateFailed withObject:nil];
+                                   } else {
+                                       [self parsingFromResult:result];
+                                       [self.user setState:kKSModelStateLoaded withObject:nil];
+                                   }
+                               }];
 }
 
 - (void)parsingFromResult:(NSDictionary *)result {

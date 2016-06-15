@@ -10,7 +10,7 @@
 #ifndef KSOutputType_h
 #define KSOutputType_h
 
-//Objective C
+
 
 #define KSWeakifySelfWithClass(classObject) \
     __weak classObject *weakSelf = self
@@ -22,12 +22,12 @@
     }
 
 
-
 #define KSWeakifySelf \
-    __weak id weakSelf = self
+__weak __typeof(self) weakSelf = self;
+//    __weak id weakSelf = self
 
 #define KSStrongifySelfAndReturnIfNil \
-    __strong id strongSelf = weakSelf; \
+    __strong __typeof(self) strongSelf = weakSelf;\
         if (!strongSelf) { \
             return; \
     }
@@ -39,6 +39,5 @@
             } \
         return nil; \
     }
-
 
 #endif /* KSOutputType_h */

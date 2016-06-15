@@ -107,6 +107,10 @@ static KSCache * model = nil;
     return nil;
 }
 
+- (NSString *)fileNameForURLString:(NSString *)URLString {
+   return [self.cachedFiles objectForKey:URLString];
+}
+
 - (BOOL)isCashedForURLString:(NSString *)URLString; {
     @synchronized (self) {
         return [self.cachedFiles objectForKey:URLString];

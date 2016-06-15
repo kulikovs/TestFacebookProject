@@ -29,6 +29,11 @@
 
 KSRootViewAndReturnNilMacro(KSLoginView);
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 #pragma mark -
 #pragma mark Handling
 

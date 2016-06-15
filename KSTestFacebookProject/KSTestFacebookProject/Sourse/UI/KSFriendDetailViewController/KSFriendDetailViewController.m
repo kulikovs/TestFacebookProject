@@ -6,11 +6,18 @@
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 #import "KSFriendDetailViewController.h"
 #import "KSFriendsDetailView.h"
 #import "KSFriendDetailContext.h"
 #import "KSUser.h"
 #import "KSStateModel.h"
+
+static NSString * const kKSDetailFriendBarTitle       = @"Detailed Info";
+static NSString * const kKSLeftBurBattonImageName     = @"BackButton1";
+static NSString * const kKSRightBurBattonImageName    = @"home";
 
 @interface KSFriendDetailViewController ()
 @property (nonatomic, readonly) KSFriendsDetailView     *rootView;
@@ -53,17 +60,34 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
     }
 }
 
+- (NSString *)navigationBarTitle {
+    return kKSDetailFriendBarTitle;
+}
+
+- (NSString *)imageNameForLeftButton {
+    return kKSLeftBurBattonImageName;
+}
+
+- (NSString *)imageNameForRightButton {
+    return kKSRightBurBattonImageName;
+}
+
 #pragma mark -
 #pragma mark View LifeCycle
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self showCustomNavigationBar];
     
     [self load];
 }
 
 #pragma mark -
 #pragma mark Private Methods
+
+- (void)clickRightBarButton {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (void)load {
     [self.rootView showLoadingViewWithDefaultTextAnimated:YES];

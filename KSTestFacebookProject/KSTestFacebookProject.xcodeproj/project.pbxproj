@@ -23,6 +23,8 @@
 		C9511C501D0AEC170028870C /* KSFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9511C4C1D0AEC170028870C /* KSFriendsViewController.xib */; };
 		C9511C581D0B13FE0028870C /* KSFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C571D0B13FE0028870C /* KSFriendsView.m */; };
 		C9511C5A1D0B342F0028870C /* iOS Study Plan.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9511C591D0B342F0028870C /* iOS Study Plan.txt */; };
+		C95D66AB1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */; };
+		C96AEFE31D107447005A4467 /* KSCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96AEFE21D107447005A4467 /* KSCustomViewController.m */; };
 		C96EE9721D0C7E0D007690E0 /* KSUserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C96EE9701D0C7E0D007690E0 /* KSUserViewCell.m */; };
 		C96EE9731D0C7E0D007690E0 /* KSUserViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96EE9711D0C7E0D007690E0 /* KSUserViewCell.xib */; };
 		C97BFE051D09C42A00F6D42A /* CGGeometry+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C97BFD931D09C42A00F6D42A /* CGGeometry+KSExtensions.m */; };
@@ -96,6 +98,10 @@
 		C9511C561D0B13FE0028870C /* KSFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFriendsView.h; sourceTree = "<group>"; };
 		C9511C571D0B13FE0028870C /* KSFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsView.m; sourceTree = "<group>"; };
 		C9511C591D0B342F0028870C /* iOS Study Plan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "iOS Study Plan.txt"; path = "KSTestFacebookProject/iOS Study Plan.txt"; sourceTree = "<group>"; };
+		C95D66A91D1189E000665DDD /* UIBarButtonItem+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KSExtensions.h"; sourceTree = "<group>"; };
+		C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KSExtensions.m"; sourceTree = "<group>"; };
+		C96AEFE11D107447005A4467 /* KSCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCustomViewController.h; sourceTree = "<group>"; };
+		C96AEFE21D107447005A4467 /* KSCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCustomViewController.m; sourceTree = "<group>"; };
 		C96EE96F1D0C7E0D007690E0 /* KSUserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserViewCell.h; sourceTree = "<group>"; };
 		C96EE9701D0C7E0D007690E0 /* KSUserViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserViewCell.m; sourceTree = "<group>"; };
 		C96EE9711D0C7E0D007690E0 /* KSUserViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSUserViewCell.xib; sourceTree = "<group>"; };
@@ -324,6 +330,24 @@
 			path = KSFriendsView;
 			sourceTree = "<group>";
 		};
+		C95D66A81D1189B300665DDD /* UIBarButtonItem+KSExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C95D66A91D1189E000665DDD /* UIBarButtonItem+KSExtensions.h */,
+				C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */,
+			);
+			path = "UIBarButtonItem+KSExtensions";
+			sourceTree = "<group>";
+		};
+		C96AEFE01D107435005A4467 /* KSCustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C96AEFE11D107447005A4467 /* KSCustomViewController.h */,
+				C96AEFE21D107447005A4467 /* KSCustomViewController.m */,
+			);
+			path = KSCustomViewController;
+			sourceTree = "<group>";
+		};
 		C96EE96E1D0C7E0D007690E0 /* KSUserViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +403,7 @@
 		C97BFD901D09C42A00F6D42A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C95D66A81D1189B300665DDD /* UIBarButtonItem+KSExtensions */,
 				C97BFD911D09C42A00F6D42A /* CGGeometry+KSExtensions */,
 				C97BFD941D09C42A00F6D42A /* NSBundle+KSExtensions */,
 				C97BFD971D09C42A00F6D42A /* NSFileManager+KSExtensions */,
@@ -682,6 +707,7 @@
 		C97BFDF91D09C42A00F6D42A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C96AEFE01D107435005A4467 /* KSCustomViewController */,
 				C96EE96E1D0C7E0D007690E0 /* KSUserViewCell */,
 				C9511C451D0AEC170028870C /* KSFriendDetailViewController */,
 				C9511C491D0AEC170028870C /* KSFriendsViewController */,
@@ -903,6 +929,7 @@
 				C97BFE071D09C42A00F6D42A /* NSFileManager+KSExtensions.m in Sources */,
 				C97BFE211D09C42A00F6D42A /* KSUserView.m in Sources */,
 				C96EE9721D0C7E0D007690E0 /* KSUserViewCell.m in Sources */,
+				C96AEFE31D107447005A4467 /* KSCustomViewController.m in Sources */,
 				C97BFE0A1D09C42A00F6D42A /* UINib+KSExtensions.m in Sources */,
 				C97BFE091D09C42A00F6D42A /* NSString+KSExtension.m in Sources */,
 				C97BFE061D09C42A00F6D42A /* NSBundle+KSExtensions.m in Sources */,
@@ -925,6 +952,7 @@
 				C97BFE391D09D00300F6D42A /* KSLoginView.m in Sources */,
 				C97BFE221D09C42A00F6D42A /* KSUserViewController.m in Sources */,
 				C97BFE081D09C42A00F6D42A /* NSObject+KSExtension.m in Sources */,
+				C95D66AB1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m in Sources */,
 				C97BFE0B1D09C42A00F6D42A /* UITableView+KSExtensions.m in Sources */,
 				C9511C401D0AE9530028870C /* KSObserverArray.m in Sources */,
 				C93410111D0EE1B8002E9EE4 /* KSFriendsContext.m in Sources */,

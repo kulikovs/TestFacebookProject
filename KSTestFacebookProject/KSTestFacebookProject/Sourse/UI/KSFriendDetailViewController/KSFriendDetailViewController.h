@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSCustomViewController.h"
 
 @class KSUser;
 
-@interface KSFriendDetailViewController : UIViewController
+@interface KSFriendDetailViewController : KSCustomViewController
 @property (nonatomic, strong) KSUser *user;
 
 @end

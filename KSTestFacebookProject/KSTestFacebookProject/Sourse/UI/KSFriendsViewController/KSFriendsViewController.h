@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSCustomViewController.h"
 
 @class KSUser;
 @class KSFriendsContext;
 
-@interface KSFriendsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@interface KSFriendsViewController : KSCustomViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) KSFriendsContext *friendsContext;
 @property (nonatomic, strong) KSUser            *user;
 

@@ -14,6 +14,9 @@
 #import "KSUserViewCell.h"
 #import "KSStateModel.h"
 
+static NSString * const kKSFriendsBarTitle       = @"FRIENDS";
+static NSString * const kKSLeftBurBattonImageName = @"BackButton1";
+
 @interface KSFriendsViewController ()
 @property (nonatomic, readonly) KSFriendsView *rootView;
 @property (nonatomic, readonly) NSArray       *userFriends;
@@ -60,11 +63,21 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
    return self.user.friends;
 }
 
+- (NSString *)navigationBarTitle {
+    return kKSFriendsBarTitle;
+}
+
+- (NSString *)imageNameForLeftButton {
+    return kKSLeftBurBattonImageName;
+}
+
 #pragma mark -
 #pragma mark View LifeCycle
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self showCustomNavigationBar];
+    
     if (self.user.state != kKSModelStateLoaded) {
         [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
     }

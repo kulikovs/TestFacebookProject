@@ -27,8 +27,8 @@
 @implementation KSImageModel
 
 @dynamic cached;
-@dynamic path;
 @dynamic fileName;
+@dynamic path;
 @dynamic cacheModel;
 
 #pragma mark -
@@ -70,7 +70,11 @@
 }
 
 - (NSString *)fileName {
-   return [[self.URL absoluteString] lastPathComponent];
+//    NSUInteger number = (unsigned long)arc4random_uniform(UINT32_MAX);
+//    NSString *fileName = [NSString stringWithFormat:@"%lu_name%@",
+//                          number, [self.URL lastPathComponent]];
+//    return fileName;
+    return [self.URL.absoluteString lastPathComponent];
 }
 
 - (void)setDownloadTask:(NSURLSessionDownloadTask *)downloadTask {

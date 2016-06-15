@@ -12,6 +12,7 @@
 @interface KSImageView ()
 @property (nonatomic, strong) UIActivityIndicatorView   *spinner;
 @property (nonatomic, strong) UIImageView               *customImageView;
+@property (nonatomic, assign) UIViewContentMode         contentMode;
 
 - (void)baseInit;
 - (void)performSpinner;
@@ -82,6 +83,13 @@
         } state:kKSModelStateFailed object:self];
     }
 }
+- (void)setContentMode:(UIViewContentMode)contentMode {
+    if (_contentMode != contentMode) {
+        _contentMode = contentMode;
+        
+        self.customImageView.contentMode = _contentMode;
+    }
+}
 
 #pragma mark -
 #pragma mark Private Methods
@@ -101,6 +109,12 @@
 
 - (void)dump {
     self.imageModel.image = nil;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.customImageView.frame = self.bounds;
+    self.spinner.center = self.customImageView.center;
 }
 
 @end

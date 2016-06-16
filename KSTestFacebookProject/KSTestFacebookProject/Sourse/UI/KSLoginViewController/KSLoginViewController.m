@@ -8,12 +8,14 @@
 
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "IDPActiveRecordKit.h"
 
 #import "KSLoginViewController.h"
 #import "KSLoginView.h"
 #import "KSFriendsViewController.h"
 #import "KSUser.h"
 #import "KSFacebookConstants.h"
+#import "KSUserModel.h"
 
 @interface KSLoginViewController ()
 @property (nonatomic, readonly) KSLoginView *rootView;
@@ -44,8 +46,14 @@ KSRootViewAndReturnNilMacro(KSLoginView);
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (!error && result.token) {
             KSFriendsViewController *friendsViewControler = [KSFriendsViewController new];
-             KSUser *user = [[KSUser alloc] initWithID:result.token.userID];
-             user.isLogedIn = YES;
+             KSUserModel *user = [KSUserModel managedObject];
+             [user setCustomValue:result.token.userID forKey:@"id"];
+             [user setCustomValue:@"YES" forKey:@"isLogedIn"];
+             [user saveManagedObject];
+             //
+             
+//             KSUser *user = [[KSUser alloc] initWithID:result.token.userID];
+//             user.isLogedIn = YES;
              friendsViewControler.user = user;
              
              [self.navigationController pushViewController:friendsViewControler animated:YES];

@@ -8,7 +8,7 @@
 
 #import "KSCustomViewController.h"
 #import "KSFacebookContext.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 
 @interface KSCustomViewController ()
 @property (nonatomic, readonly) UINavigationItem  *navigationItem;
@@ -52,7 +52,7 @@
     }
 }
 
-- (void)setUser:(KSUser *)user {
+- (void)setUser:(KSUserModel *)user {
     if (_user != user) {
         _user = user;
         

@@ -13,6 +13,8 @@
 		C93410111D0EE1B8002E9EE4 /* KSFriendsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C934100F1D0EE1B8002E9EE4 /* KSFriendsContext.m */; };
 		C93C21C71D0D772900A2C5A9 /* KSFriendsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C21C61D0D772900A2C5A9 /* KSFriendsDetailView.m */; };
 		C94FEA781D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94FEA761D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld */; };
+		C94FEA7D1D12F6F7006AB333 /* KSUserModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C94FEA7A1D12F6F7006AB333 /* KSUserModel+CoreDataProperties.m */; };
+		C94FEA7E1D12F6F7006AB333 /* KSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C94FEA7C1D12F6F7006AB333 /* KSUserModel.m */; };
 		C9511C3E1D0AE9530028870C /* KSDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C301D0AE9530028870C /* KSDispatch.m */; };
 		C9511C3F1D0AE9530028870C /* KSObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C331D0AE9530028870C /* KSObserver.m */; };
 		C9511C401D0AE9530028870C /* KSObserverArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C371D0AE9530028870C /* KSObserverArray.m */; };
@@ -79,6 +81,10 @@
 		C93C21C51D0D772900A2C5A9 /* KSFriendsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFriendsDetailView.h; sourceTree = "<group>"; };
 		C93C21C61D0D772900A2C5A9 /* KSFriendsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsDetailView.m; sourceTree = "<group>"; };
 		C94FEA771D12DDC8006AB333 /* KSCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KSCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		C94FEA791D12F6F7006AB333 /* KSUserModel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KSUserModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C94FEA7A1D12F6F7006AB333 /* KSUserModel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KSUserModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C94FEA7B1D12F6F7006AB333 /* KSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserModel.h; sourceTree = "<group>"; };
+		C94FEA7C1D12F6F7006AB333 /* KSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserModel.m; sourceTree = "<group>"; };
 		C9511C2F1D0AE9530028870C /* KSDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDispatch.h; sourceTree = "<group>"; };
 		C9511C301D0AE9530028870C /* KSDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDispatch.m; sourceTree = "<group>"; };
 		C9511C321D0AE9530028870C /* KSObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSObserver.h; sourceTree = "<group>"; };
@@ -247,6 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				C94FEA761D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld */,
+				C94FEA791D12F6F7006AB333 /* KSUserModel+CoreDataProperties.h */,
+				C94FEA7A1D12F6F7006AB333 /* KSUserModel+CoreDataProperties.m */,
+				C94FEA7B1D12F6F7006AB333 /* KSUserModel.h */,
+				C94FEA7C1D12F6F7006AB333 /* KSUserModel.m */,
 			);
 			path = KSCoreDataModel;
 			sourceTree = "<group>";
@@ -944,6 +954,7 @@
 				C97BFE0A1D09C42A00F6D42A /* UINib+KSExtensions.m in Sources */,
 				C97BFE091D09C42A00F6D42A /* NSString+KSExtension.m in Sources */,
 				C97BFE061D09C42A00F6D42A /* NSBundle+KSExtensions.m in Sources */,
+				C94FEA7D1D12F6F7006AB333 /* KSUserModel+CoreDataProperties.m in Sources */,
 				C9511C581D0B13FE0028870C /* KSFriendsView.m in Sources */,
 				C94FEA781D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld in Sources */,
 				C97BFE1E1D09C42A00F6D42A /* KSImageView.m in Sources */,
@@ -962,6 +973,7 @@
 				C9511C411D0AE9530028870C /* KSObserverDictionary.m in Sources */,
 				C97BFE051D09C42A00F6D42A /* CGGeometry+KSExtensions.m in Sources */,
 				C97BFE391D09D00300F6D42A /* KSLoginView.m in Sources */,
+				C94FEA7E1D12F6F7006AB333 /* KSUserModel.m in Sources */,
 				C97BFE221D09C42A00F6D42A /* KSUserViewController.m in Sources */,
 				C97BFE081D09C42A00F6D42A /* NSObject+KSExtension.m in Sources */,
 				C95D66AB1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m in Sources */,

@@ -6,6 +6,7 @@
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "IDPActiveRecordKit.h"
 
 #import "AppDelegate.h"
 #import "KSLoginViewController.h"
@@ -17,6 +18,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [IDPCoreDataManager sharedManagerWithMomName:@"KSCoreDataModel"];
     
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];

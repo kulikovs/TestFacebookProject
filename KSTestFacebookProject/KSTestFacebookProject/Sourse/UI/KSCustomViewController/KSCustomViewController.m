@@ -15,9 +15,6 @@
 
 - (void)clickLeftBarButton;
 - (void)clickRightBarButton;
-- (void)addHandlerForUser;
-- (void)userDidLoad;
-- (void)userLoadFailed;
 
 @end
 
@@ -59,7 +56,7 @@
     if (_user != user) {
         _user = user;
         
-        [self addHandlerForUser];
+        [self addHandlersForUser];
     }
 }
 
@@ -74,7 +71,7 @@
 #pragma mark -
 #pragma mark Private Methods
 
-- (void)addHandlerForUser {
+- (void)addHandlersForUser {
     KSWeakifySelf;
     [_user addHandler:^(id object) {
         KSStrongifySelfAndReturnIfNil;

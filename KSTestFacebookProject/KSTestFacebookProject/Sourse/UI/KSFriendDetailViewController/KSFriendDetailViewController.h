@@ -12,6 +12,5 @@
 @class KSUser;
 
 @interface KSFriendDetailViewController : KSCustomViewController
-@property (nonatomic, strong) KSUser *user;
 
 @end

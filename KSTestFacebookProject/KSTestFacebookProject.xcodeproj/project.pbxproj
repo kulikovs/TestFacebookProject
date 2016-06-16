@@ -12,6 +12,7 @@
 		C93410101D0EE1B8002E9EE4 /* KSFriendDetailContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C934100C1D0EE1B8002E9EE4 /* KSFriendDetailContext.m */; };
 		C93410111D0EE1B8002E9EE4 /* KSFriendsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C934100F1D0EE1B8002E9EE4 /* KSFriendsContext.m */; };
 		C93C21C71D0D772900A2C5A9 /* KSFriendsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C21C61D0D772900A2C5A9 /* KSFriendsDetailView.m */; };
+		C94FEA781D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94FEA761D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld */; };
 		C9511C3E1D0AE9530028870C /* KSDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C301D0AE9530028870C /* KSDispatch.m */; };
 		C9511C3F1D0AE9530028870C /* KSObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C331D0AE9530028870C /* KSObserver.m */; };
 		C9511C401D0AE9530028870C /* KSObserverArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C371D0AE9530028870C /* KSObserverArray.m */; };
@@ -77,6 +78,7 @@
 		C934100F1D0EE1B8002E9EE4 /* KSFriendsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsContext.m; sourceTree = "<group>"; };
 		C93C21C51D0D772900A2C5A9 /* KSFriendsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFriendsDetailView.h; sourceTree = "<group>"; };
 		C93C21C61D0D772900A2C5A9 /* KSFriendsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsDetailView.m; sourceTree = "<group>"; };
+		C94FEA771D12DDC8006AB333 /* KSCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KSCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C9511C2F1D0AE9530028870C /* KSDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDispatch.h; sourceTree = "<group>"; };
 		C9511C301D0AE9530028870C /* KSDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDispatch.m; sourceTree = "<group>"; };
 		C9511C321D0AE9530028870C /* KSObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSObserver.h; sourceTree = "<group>"; };
@@ -239,6 +241,14 @@
 				C93C21C61D0D772900A2C5A9 /* KSFriendsDetailView.m */,
 			);
 			path = KSFriendsDetailView;
+			sourceTree = "<group>";
+		};
+		C94FEA751D12DDA7006AB333 /* KSCoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C94FEA761D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld */,
+			);
+			path = KSCoreDataModel;
 			sourceTree = "<group>";
 		};
 		C9511C2E1D0AE9530028870C /* KSDispatch */ = {
@@ -699,6 +709,7 @@
 		C97BFDF81D09C42A00F6D42A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C94FEA751D12DDA7006AB333 /* KSCoreDataModel */,
 				C97BFE551D09FCD800F6D42A /*  KSUser */,
 			);
 			path = Models;
@@ -934,6 +945,7 @@
 				C97BFE091D09C42A00F6D42A /* NSString+KSExtension.m in Sources */,
 				C97BFE061D09C42A00F6D42A /* NSBundle+KSExtensions.m in Sources */,
 				C9511C581D0B13FE0028870C /* KSFriendsView.m in Sources */,
+				C94FEA781D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld in Sources */,
 				C97BFE1E1D09C42A00F6D42A /* KSImageView.m in Sources */,
 				C97BFE161D09C42A00F6D42A /* KSAlphabetString.m in Sources */,
 				C9511C3E1D0AE9530028870C /* KSDispatch.m in Sources */,
@@ -1118,6 +1130,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C94FEA761D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C94FEA771D12DDC8006AB333 /* KSCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = C94FEA771D12DDC8006AB333 /* KSCoreDataModel.xcdatamodel */;
+			path = KSCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C97BFD6D1D09BFAE00F6D42A /* Project object */;
 }

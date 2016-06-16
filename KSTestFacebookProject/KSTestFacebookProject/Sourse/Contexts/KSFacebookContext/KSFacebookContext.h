@@ -15,8 +15,11 @@
 @property (nonatomic, readonly) NSDictionary *requestParameters;
 
 - (instancetype)initWithUser:(KSUser *)user;
-- (void)parseResult:(NSDictionary *)result;
 - (void)execute;
 - (void)cancel;
+
+//these methods are called in subclasses
+//you should never call these method directly from outside subclasses
+- (void)parseResult:(NSDictionary *)result;
 
 @end

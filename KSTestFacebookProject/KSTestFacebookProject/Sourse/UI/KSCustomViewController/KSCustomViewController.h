@@ -6,12 +6,17 @@
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 
+@class KSFacebookContext;
+@class KSUser;
+
 #import <UIKit/UIKit.h>
 
 @interface KSCustomViewController : UIViewController
-@property (nonatomic, readonly) NSString         *navigationBarTitle;
-@property (nonatomic, readonly) NSString         *imageNameForLeftButton;
-@property (nonatomic, readonly) NSString         *imageNameForRightButton;
+@property (nonatomic, readonly) NSString            *navigationBarTitle;
+@property (nonatomic, readonly) NSString            *imageNameForLeftButton;
+@property (nonatomic, readonly) NSString            *imageNameForRightButton;
+@property (nonatomic, strong)   KSFacebookContext   *context;
+@property (nonatomic, strong)   KSUser              *user;
 
 - (void)showCustomNavigationBar;
 
@@ -19,6 +24,11 @@
                leftButtonImageName:(NSString *)leftButtonImageName
               rightButtonImageName:(NSString *)rightButtonImageName;
 
+//these methods are called in subclasses
+//you should never call these method directly from outside subclasses
+- (void)addHandlerForUser;
+- (void)userDidLoad;
+- (void)userLoadFailed;
 
 
 @end

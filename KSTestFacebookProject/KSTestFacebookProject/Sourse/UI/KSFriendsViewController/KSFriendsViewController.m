@@ -14,8 +14,8 @@
 #import "KSUserViewCell.h"
 #import "KSStateModel.h"
 
-static NSString * const kKSFriendsBarTitle       = @"FRIENDS";
-static NSString * const kKSLeftBurBattonImageName = @"BackButton1";
+static NSString * const kKSFriendsBarTitle          = @"FRIENDS";
+static NSString * const kKSLeftBurBattonImageName   = @"BackButton1";
 
 @interface KSFriendsViewController ()
 @property (nonatomic, readonly) KSFriendsView *rootView;
@@ -34,29 +34,9 @@ static NSString * const kKSLeftBurBattonImageName = @"BackButton1";
 KSRootViewAndReturnNilMacro(KSFriendsView);
 
 - (void)setUser:(KSUser *)user {
-    if (_user != user) {
-        _user = user;
-        
-        KSWeakifySelf;
-        [_user addHandler:^(KSStateModel *object) {
-            KSStrongifySelfWithClass(KSFriendsViewController);
-            KSFriendsView *rootView = strongSelf.rootView;
-            [rootView.tableView reloadData];
-            [rootView removeLoadingViewAnimated:YES];
-        }
-                    state:kKSModelStateLoaded
-                   object:self];
-        
-        self.friendsContext = [[KSFriendsContext alloc] initWithUser:self.user];
-    }
-}
+    [super setUser:user];
 
-- (void)setFriendsContext:(KSFriendsContext *)friendsContext {
-    if (_friendsContext != friendsContext) {
-        [_friendsContext cancel];
-        _friendsContext = friendsContext;
-        [_friendsContext execute];
-    }
+        self.context = [[KSFriendsContext alloc] initWithUser:self.user];
 }
 
 - (NSArray *)userFriends {
@@ -76,11 +56,18 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self showCustomNavigationBar];
-    
     if (self.user.state != kKSModelStateLoaded) {
         [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
     }
+}
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)userDidLoad {
+    KSFriendsView *rootView = self.rootView;
+    [rootView.tableView reloadData];
+    [rootView removeLoadingViewAnimated:YES];
 }
 
 #pragma mark -

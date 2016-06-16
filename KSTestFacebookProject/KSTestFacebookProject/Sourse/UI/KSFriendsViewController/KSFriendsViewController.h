@@ -12,9 +12,6 @@
 @class KSUser;
 @class KSFriendsContext;
 
-
 @interface KSFriendsViewController : KSCustomViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) KSFriendsContext *friendsContext;
-@property (nonatomic, strong) KSUser            *user;
 
 @end

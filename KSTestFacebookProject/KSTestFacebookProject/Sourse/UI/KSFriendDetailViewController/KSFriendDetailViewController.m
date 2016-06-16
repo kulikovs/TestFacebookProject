@@ -21,7 +21,6 @@ static NSString * const kKSRightBarBattonImageName    = @"home";
 
 @interface KSFriendDetailViewController ()
 @property (nonatomic, readonly) KSFriendsDetailView     *rootView;
-@property (nonatomic, strong)   KSFriendDetailContext   *detailContext;
 
 @end
 
@@ -35,29 +34,9 @@ static NSString * const kKSRightBarBattonImageName    = @"home";
 KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 
 - (void)setUser:(KSUser *)user {
-    if (_user != user) {
-        _user = user;
-        
-        KSWeakifySelf;
-        [_user addHandler:^(KSStateModel *object) {
-            KSStrongifySelfWithClass(KSFriendDetailViewController);
-            KSFriendsDetailView *rootView = strongSelf.rootView;
-            [strongSelf.rootView fillWithUser:strongSelf.user];
-            [rootView removeLoadingViewAnimated:NO];
-        }
-                    state:kKSModelStateLoaded
-                   object:self];
-        
-      self.detailContext = [[KSFriendDetailContext alloc] initWithUser:_user];
-    }
-}
-
-- (void)setDetailContext:(KSFriendDetailContext *)detailContext {
-    if (_detailContext != detailContext) {
-        [_detailContext cancel];
-        _detailContext = detailContext;
-        [_detailContext execute];
-    }
+    [super setUser:user];
+    
+      self.context = [[KSFriendDetailContext alloc] initWithUser:user];
 }
 
 - (NSString *)navigationBarTitle {
@@ -77,13 +56,18 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self showCustomNavigationBar];
     
     [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
 }
 
 #pragma mark -
-#pragma mark Private Methods
+#pragma mark Public Methods
+
+- (void)userDidLoad {
+    KSFriendsDetailView *rootView = self.rootView;
+    [self.rootView fillWithUser:self.user];
+    [rootView removeLoadingViewAnimated:NO];
+}
 
 - (void)clickRightBarButton {
     [self.navigationController popToRootViewControllerAnimated:YES];

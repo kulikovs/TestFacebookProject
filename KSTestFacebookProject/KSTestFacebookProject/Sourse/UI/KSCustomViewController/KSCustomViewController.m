@@ -7,12 +7,17 @@
 //
 
 #import "KSCustomViewController.h"
+#import "KSFacebookContext.h"
+#import "KSUser.h"
 
 @interface KSCustomViewController ()
-@property (nonatomic, readonly) UINavigationItem *navigationItem;
+@property (nonatomic, readonly) UINavigationItem  *navigationItem;
 
 - (void)clickLeftBarButton;
 - (void)clickRightBarButton;
+- (void)addHandlerForUser;
+- (void)userDidLoad;
+- (void)userLoadFailed;
 
 @end
 
@@ -42,9 +47,68 @@
     return nil;
 }
 
+- (void)setContext:(KSFacebookContext *)context {
+    if (_context != context) {
+        [_context cancel];
+        _context = context;
+        [_context execute];
+    }
+}
+
+- (void)setUser:(KSUser *)user {
+    if (_user != user) {
+        _user = user;
+        
+        [self addHandlerForUser];
+    }
+}
+
+#pragma mark -
+#pragma mark Life Cycle
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self showCustomNavigationBar];
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (void)addHandlerForUser {
+    KSWeakifySelf;
+    [_user addHandler:^(id object) {
+        KSStrongifySelfAndReturnIfNil;
+        [strongSelf userDidLoad];
+    }
+                state:kKSModelStateLoaded
+               object:self];
+    
+    [_user addHandler:^(id object) {
+        KSStrongifySelfAndReturnIfNil;
+        [strongSelf userLoadFailed];
+    }
+                state:kKSModelStateFailed
+               object:self];
+}
+
+- (void)clickLeftBarButton {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)clickRightBarButton {
+    
+}
+
 #pragma mark - 
 #pragma mark Public Methods
 
+- (void)userDidLoad {
+
+}
+
+- (void)userLoadFailed {
+
+}
 - (void)showCustomNavigationBar {
     [self showNavigationBarWithTitle:self.navigationBarTitle
                  leftButtonImageName:self.imageNameForLeftButton
@@ -67,17 +131,6 @@
                                               buttonWithImageName:rightButtonImageName
                                                          selector:@selector(clickRightBarButton)
                                                            target:self];
-}
-
-#pragma mark -
-#pragma mark Private Methods
-
-- (void)clickLeftBarButton {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)clickRightBarButton {
-
 }
 
 @end

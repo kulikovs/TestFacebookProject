@@ -54,13 +54,13 @@
                                    if (error) {
                                        [self.user setState:kKSModelStateFailed withObject:nil];
                                    } else {
-                                       [self parsingFromResult:result];
+                                       [self parseResult:result];
                                        [self.user setState:kKSModelStateLoaded withObject:nil];
                                    }
                                }];
 }
 
-- (void)parsingFromResult:(NSDictionary *)result {
+- (void)parseResult:(NSDictionary *)result {
 
 }
 

@@ -10,6 +10,4 @@
 
 @interface KSFriendDetailContext : KSFacebookContext
 
-- (void)parsingFromResult:(id)result;
-
 @end

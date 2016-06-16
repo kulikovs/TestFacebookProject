@@ -15,7 +15,7 @@
 @property (nonatomic, readonly) NSDictionary *requestParameters;
 
 - (instancetype)initWithUser:(KSUser *)user;
-- (void)parsingFromResult:(NSDictionary *)result;
+- (void)parseResult:(NSDictionary *)result;
 - (void)execute;
 - (void)cancel;
 

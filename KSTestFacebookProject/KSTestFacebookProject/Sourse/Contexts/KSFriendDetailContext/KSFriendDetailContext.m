@@ -25,7 +25,7 @@
 #pragma mark -
 #pragma mark Public methods
 
-- (void)parsingFromResult:(id)result {
+- (void)parseResult:(id)result {
     self.user.gender = [result  valueForKey:kKSUserGenderKey];    
 }
 

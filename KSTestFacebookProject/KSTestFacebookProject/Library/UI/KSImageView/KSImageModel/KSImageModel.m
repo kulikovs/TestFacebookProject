@@ -70,11 +70,11 @@
 }
 
 - (NSString *)fileName {
-//    NSUInteger number = (unsigned long)arc4random_uniform(UINT32_MAX);
-//    NSString *fileName = [NSString stringWithFormat:@"%lu_name%@",
-//                          number, [self.URL lastPathComponent]];
-//    return fileName;
-    return [self.URL.absoluteString lastPathComponent];
+    NSArray *paths = [self.URL pathComponents];
+    NSString *fileName = [NSString stringWithFormat:@"%@_%@",paths[paths.count - 2],
+                          [self.URL lastPathComponent]];
+
+    return fileName;
 }
 
 - (void)setDownloadTask:(NSURLSessionDownloadTask *)downloadTask {

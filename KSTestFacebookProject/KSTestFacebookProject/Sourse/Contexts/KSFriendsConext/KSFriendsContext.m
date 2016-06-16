@@ -15,13 +15,13 @@
 #pragma mark -
 #pragma mark Public methods
 
-- (void)parsingFromResult:(NSDictionary *)result {
+- (void)parseResult:(NSDictionary *)result {
     NSArray *array = [result valueForKeyPath:kKSFriendsKey];
     NSMutableArray *friendsArray = [NSMutableArray array];
     
     for (NSDictionary *dictionary in array) {
-        NSString *id = [dictionary  valueForKey:kKSUserIDKey];
-        KSUser *user = [[KSUser alloc] initWithID:id];
+        NSString *ID = [dictionary  valueForKey:kKSUserIDKey];
+        KSUser *user = [[KSUser alloc] initWithID:ID];
         
         user.firstName = [dictionary valueForKey:kKSFirstNameKey];
         user.lastName = [dictionary valueForKey:kKSLastNameKey];

@@ -16,8 +16,8 @@
 #import "KSStateModel.h"
 
 static NSString * const kKSDetailFriendBarTitle       = @"Detailed Info";
-static NSString * const kKSLeftBurBattonImageName     = @"BackButton1";
-static NSString * const kKSRightBurBattonImageName    = @"home";
+static NSString * const kKSLeftBarBattonImageName     = @"BackButton1";
+static NSString * const kKSRightBarBattonImageName    = @"home";
 
 @interface KSFriendDetailViewController ()
 @property (nonatomic, readonly) KSFriendsDetailView     *rootView;
@@ -65,11 +65,11 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 }
 
 - (NSString *)imageNameForLeftButton {
-    return kKSLeftBurBattonImageName;
+    return kKSLeftBarBattonImageName;
 }
 
 - (NSString *)imageNameForRightButton {
-    return kKSRightBurBattonImageName;
+    return kKSRightBarBattonImageName;
 }
 
 #pragma mark -
@@ -79,7 +79,7 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
     [super viewWillAppear:animated];
     [self showCustomNavigationBar];
     
-    [self load];
+    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
 }
 
 #pragma mark -
@@ -87,10 +87,6 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 
 - (void)clickRightBarButton {
     [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
-- (void)load {
-    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
 }
 
 @end

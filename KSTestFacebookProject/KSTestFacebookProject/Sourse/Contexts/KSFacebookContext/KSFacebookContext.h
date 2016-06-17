@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KSModel.h"
 
 @class KSUser;
 
-@interface KSFacebookContext : NSObject
+@interface KSFacebookContext : KSModel
 @property (nonatomic, strong)   KSUser *user;
 @property (nonatomic, readonly) NSDictionary *requestParameters;
 

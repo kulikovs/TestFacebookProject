@@ -7,7 +7,7 @@
 //
 
 @class KSFacebookContext;
-@class KSUserModel;
+@class KSUser;
 
 #import <UIKit/UIKit.h>
 
@@ -16,7 +16,7 @@
 @property (nonatomic, readonly) NSString            *imageNameForLeftButton;
 @property (nonatomic, readonly) NSString            *imageNameForRightButton;
 @property (nonatomic, strong)   KSFacebookContext   *context;
-@property (nonatomic, strong)   KSUserModel         *user;
+@property (nonatomic, strong)   KSUser              *user;
 
 - (void)showCustomNavigationBar;
 
@@ -26,9 +26,9 @@
 
 //these methods are called in subclasses
 //you should never call these method directly from outside subclasses
-- (void)addHandlersForUser;
-- (void)userDidLoad;
-- (void)userLoadFailed;
+- (void)addHandlers;
+- (void)contextDidLoad;
+- (void)contextLoadFailed;
 
 
 @end

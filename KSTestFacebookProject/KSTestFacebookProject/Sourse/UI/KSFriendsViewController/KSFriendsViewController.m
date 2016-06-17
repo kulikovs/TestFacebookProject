@@ -56,7 +56,7 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    if (self.user.state != kKSModelStateLoaded) {
+    if (self.context.state!= kKSModelStateLoaded) {
         [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
     }
 }
@@ -64,7 +64,7 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)userDidLoad {
+- (void)contextDidLoad {
     KSFriendsView *rootView = self.rootView;
     [rootView.tableView reloadData];
     [rootView removeLoadingViewAnimated:YES];

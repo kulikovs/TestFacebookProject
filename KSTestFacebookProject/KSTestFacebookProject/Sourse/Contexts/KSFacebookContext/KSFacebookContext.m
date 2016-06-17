@@ -9,6 +9,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
+#import "KSModel.h"
 #import "KSUser.h"
 #import "KSFacebookConstants.h"
 #import "KSFacebookContext.h"
@@ -52,10 +53,10 @@
                                                                     NSError *error)
                                {
                                    if (error) {
-                                       [self.user setState:kKSModelStateFailed withObject:nil];
+                                       [self setState:kKSModelStateFailed withObject:nil];
                                    } else {
                                        [self parseResult:result];
-                                       [self.user setState:kKSModelStateLoaded withObject:nil];
+                                       [self setState:kKSModelStateLoaded withObject:nil];
                                    }
                                }];
 }

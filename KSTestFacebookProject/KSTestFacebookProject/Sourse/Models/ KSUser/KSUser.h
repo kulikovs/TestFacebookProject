@@ -11,7 +11,7 @@
 
 @class KSImageView;
 
-@interface KSUser : KSModel
+@interface KSUser : NSObject
 @property (nonatomic, copy)     NSString        *ID;
 @property (nonatomic, copy)     NSString        *firstName;
 @property (nonatomic, copy)     NSString        *lastName;

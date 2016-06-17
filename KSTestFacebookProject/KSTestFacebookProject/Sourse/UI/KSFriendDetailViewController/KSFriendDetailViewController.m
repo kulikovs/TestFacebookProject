@@ -63,7 +63,7 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)userDidLoad {
+- (void)contextDidLoad {
     KSFriendsDetailView *rootView = self.rootView;
     [self.rootView fillWithUser:self.user];
     [rootView removeLoadingViewAnimated:NO];

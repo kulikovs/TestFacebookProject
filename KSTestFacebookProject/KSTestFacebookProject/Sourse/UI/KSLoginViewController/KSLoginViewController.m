@@ -46,14 +46,14 @@ KSRootViewAndReturnNilMacro(KSLoginView);
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (!error && result.token) {
             KSFriendsViewController *friendsViewControler = [KSFriendsViewController new];
-             KSUserModel *user = [KSUserModel managedObject];
-             [user setCustomValue:result.token.userID forKey:@"id"];
-             [user setCustomValue:@"YES" forKey:@"isLogedIn"];
-             [user saveManagedObject];
+//             KSUserModel *user = [KSUserModel managedObject];
+//             [user setCustomValue:result.token.userID forKey:@"id"];
+//             [user setCustomValue:@"YES" forKey:@"isLogedIn"];
+//             [user saveManagedObject];
              //
              
-//             KSUser *user = [[KSUser alloc] initWithID:result.token.userID];
-//             user.isLogedIn = YES;
+             KSUser *user = [[KSUser alloc] initWithID:result.token.userID];
+             user.isLogedIn = YES;
              friendsViewControler.user = user;
              
              [self.navigationController pushViewController:friendsViewControler animated:YES];

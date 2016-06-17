@@ -9,6 +9,7 @@
 #import "KSCustomViewController.h"
 #import "KSFacebookContext.h"
 #import "KSUserModel.h"
+#import "KSUser.h"
 
 @interface KSCustomViewController ()
 @property (nonatomic, readonly) UINavigationItem  *navigationItem;
@@ -49,14 +50,14 @@
         [_context cancel];
         _context = context;
         [_context execute];
+        
+        [self addHandlers];
     }
 }
 
-- (void)setUser:(KSUserModel *)user {
+- (void)setUser:(KSUser *)user {
     if (_user != user) {
         _user = user;
-        
-        [self addHandlersForUser];
     }
 }
 
@@ -71,18 +72,18 @@
 #pragma mark -
 #pragma mark Private Methods
 
-- (void)addHandlersForUser {
+- (void)addHandlers {
     KSWeakifySelf;
-    [_user addHandler:^(id object) {
+    [_context addHandler:^(id object) {
         KSStrongifySelfAndReturnIfNil;
-        [strongSelf userDidLoad];
+        [strongSelf contextDidLoad];
     }
                 state:kKSModelStateLoaded
                object:self];
     
-    [_user addHandler:^(id object) {
+    [_context addHandler:^(id object) {
         KSStrongifySelfAndReturnIfNil;
-        [strongSelf userLoadFailed];
+        [strongSelf contextLoadFailed];
     }
                 state:kKSModelStateFailed
                object:self];
@@ -99,11 +100,11 @@
 #pragma mark - 
 #pragma mark Public Methods
 
-- (void)userDidLoad {
+- (void)contextDidLoad {
 
 }
 
-- (void)userLoadFailed {
+- (void)contextLoadFailed {
 
 }
 - (void)showCustomNavigationBar {

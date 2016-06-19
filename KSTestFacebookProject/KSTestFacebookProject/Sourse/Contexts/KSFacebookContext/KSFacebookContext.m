@@ -10,7 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 #import "KSModel.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 #import "KSFacebookConstants.h"
 #import "KSFacebookContext.h"
 
@@ -24,7 +24,7 @@
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
-- (instancetype)initWithUser:(KSUser *)user {
+- (instancetype)initWithUser:(KSUserModel *)user {
     self = [self init];
     if (self) {
         self.user = user;
@@ -56,6 +56,7 @@
                                        [self setState:kKSModelStateFailed withObject:nil];
                                    } else {
                                        [self parseResult:result];
+                                       [self.user saveManagedObject];
                                        [self setState:kKSModelStateLoaded withObject:nil];
                                    }
                                }];

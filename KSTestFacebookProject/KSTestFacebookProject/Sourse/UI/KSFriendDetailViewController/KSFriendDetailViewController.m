@@ -12,7 +12,7 @@
 #import "KSFriendDetailViewController.h"
 #import "KSFriendsDetailView.h"
 #import "KSFriendDetailContext.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 #import "KSStateModel.h"
 
 static NSString * const kKSDetailFriendBarTitle       = @"Detailed Info";
@@ -33,7 +33,7 @@ static NSString * const kKSRightBarBattonImageName    = @"home";
 
 KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 
-- (void)setUser:(KSUser *)user {
+- (void)setUser:(KSUserModel *)user {
     [super setUser:user];
     
       self.context = [[KSFriendDetailContext alloc] initWithUser:user];

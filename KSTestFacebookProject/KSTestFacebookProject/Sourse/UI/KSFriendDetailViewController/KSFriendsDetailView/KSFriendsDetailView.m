@@ -7,13 +7,13 @@
 //
 
 #import "KSFriendsDetailView.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 #import "KSFacebookConstants.h"
 #import "KSImageView.h"
 
 @implementation KSFriendsDetailView
 
-- (void)fillWithUser:(KSUser *)user {
+- (void)fillWithUser:(KSUserModel *)user {
     self.firstName.text = user.firstName;
     self.lastName.text = user.lastName;
     self.gender.text = user.gender;

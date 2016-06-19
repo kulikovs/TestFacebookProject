@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "KSModel.h"
 
-@class KSUser;
+@class KSUserModel;
 
 @interface KSFacebookContext : KSModel
-@property (nonatomic, strong)   KSUser *user;
+@property (nonatomic, strong)   KSUserModel  *user;
 @property (nonatomic, readonly) NSDictionary *requestParameters;
 
-- (instancetype)initWithUser:(KSUser *)user;
+- (instancetype)initWithUser:(KSUserModel *)user;
 - (void)execute;
 - (void)cancel;
 

@@ -15,8 +15,6 @@
 
 @dynamic firstName;
 @dynamic gender;
-@dynamic id;
-@dynamic isLogedIn;
 @dynamic lastName;
 @dynamic urlLargeImage;
 @dynamic urlSmallImage;

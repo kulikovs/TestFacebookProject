@@ -15,14 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KSUserModel (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *firstName;
-@property (nullable, nonatomic, retain) NSString *gender;
-@property (nullable, nonatomic, retain) NSString *id;
-@property (nullable, nonatomic, retain) NSNumber *isLogedIn;
-@property (nullable, nonatomic, retain) NSString *lastName;
-@property (nullable, nonatomic, retain) NSString *urlLargeImage;
-@property (nullable, nonatomic, retain) NSString *urlSmallImage;
-@property (nullable, nonatomic, retain) NSSet<KSUserModel *> *friends;
+@property (nonatomic, copy)     NSString   *firstName;
+@property (nonatomic, copy)     NSString   *gender;
+@property (nonatomic, copy)     NSString   *lastName;
+@property (nonatomic, copy)     NSString   *urlLargeImage;
+@property (nonatomic, copy)     NSString   *urlSmallImage;
+
+@property (nonatomic, strong)     NSSet      <KSUserModel *> *friends;
 
 @end
 

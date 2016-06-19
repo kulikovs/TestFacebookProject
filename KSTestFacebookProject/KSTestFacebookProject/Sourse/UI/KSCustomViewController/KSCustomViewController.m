@@ -9,7 +9,6 @@
 #import "KSCustomViewController.h"
 #import "KSFacebookContext.h"
 #import "KSUserModel.h"
-#import "KSUser.h"
 
 @interface KSCustomViewController ()
 @property (nonatomic, readonly) UINavigationItem  *navigationItem;
@@ -55,9 +54,11 @@
     }
 }
 
-- (void)setUser:(KSUser *)user {
+- (void)setUser:(KSUserModel *)user {
     if (_user != user) {
         _user = user;
+        
+        [_user saveManagedObject];
     }
 }
 
@@ -118,17 +119,19 @@
               rightButtonImageName:(NSString *)rightButtonImageName
 {
     self.navigationController.navigationBarHidden = NO;
-    self.navigationItem.title = title;
+    UINavigationItem *navigationItem = self.navigationItem;
     
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem
-                                             buttonWithImageName:leftButtonImageName
-                                                        selector:@selector(clickLeftBarButton)
-                                                          target:self];
+    navigationItem.title = title;
     
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem
-                                              buttonWithImageName:rightButtonImageName
-                                                         selector:@selector(clickRightBarButton)
-                                                           target:self];
+    navigationItem.leftBarButtonItem = [UIBarButtonItem
+                                        buttonWithImageName:leftButtonImageName
+                                        selector:@selector(clickLeftBarButton)
+                                        target:self];
+    
+    navigationItem.rightBarButtonItem = [UIBarButtonItem
+                                         buttonWithImageName:rightButtonImageName
+                                         selector:@selector(clickRightBarButton)
+                                         target:self];
 }
 
 @end

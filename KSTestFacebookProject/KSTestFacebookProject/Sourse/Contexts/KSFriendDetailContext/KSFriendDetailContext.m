@@ -10,7 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 #import "KSFriendDetailContext.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 #import "KSFacebookConstants.h"
 
 @implementation KSFriendDetailContext

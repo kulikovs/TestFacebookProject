@@ -9,7 +9,7 @@
 #import "KSFriendsViewController.h"
 #import "KSFriendDetailViewController.h"
 #import "KSFriendsView.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 #import "KSFriendsContext.h"
 #import "KSUserViewCell.h"
 #import "KSStateModel.h"
@@ -18,8 +18,8 @@ static NSString * const kKSFriendsBarTitle          = @"FRIENDS";
 static NSString * const kKSLeftBurBattonImageName   = @"BackButton1";
 
 @interface KSFriendsViewController ()
-@property (nonatomic, readonly) KSFriendsView *rootView;
-@property (nonatomic, readonly) NSArray       *userFriends;
+@property (nonatomic, readonly) KSFriendsView   *rootView;
+@property (nonatomic, readonly) NSArray         *userFriends;
 
 @end
 
@@ -33,14 +33,14 @@ static NSString * const kKSLeftBurBattonImageName   = @"BackButton1";
 
 KSRootViewAndReturnNilMacro(KSFriendsView);
 
-- (void)setUser:(KSUser *)user {
+- (void)setUser:(KSUserModel *)user {
     [super setUser:user];
 
         self.context = [[KSFriendsContext alloc] initWithUser:self.user];
 }
 
 - (NSArray *)userFriends {
-   return self.user.friends;
+   return self.user.userFriends;
 }
 
 - (NSString *)navigationBarTitle {

@@ -7,7 +7,7 @@
 //
 
 #import "KSFriendsContext.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 #import "KSFacebookConstants.h"
 
 @implementation KSFriendsContext
@@ -17,20 +17,20 @@
 
 - (void)parseResult:(NSDictionary *)result {
     NSArray *array = [result valueForKeyPath:kKSFriendsKey];
-    NSMutableArray *friendsArray = [NSMutableArray array];
+    NSMutableArray *friends = [NSMutableArray array];
     
     for (NSDictionary *dictionary in array) {
         NSString *ID = [dictionary  valueForKey:kKSUserIDKey];
-        KSUser *user = [[KSUser alloc] initWithID:ID];
+       KSUserModel *user = [KSUserModel  objectWithID:ID];
         
         user.firstName = [dictionary valueForKey:kKSFirstNameKey];
         user.lastName = [dictionary valueForKey:kKSLastNameKey];
-        user.URLStringSmallImage = [dictionary valueForKeyPath:kKSPictureURLKey];
+        user.urlSmallImage = [dictionary valueForKeyPath:kKSPictureURLKey];
         
-        [friendsArray addObject:user];
+        [friends addObject:user];
     }
     
-    [self.user replaceFriends:friendsArray];
+    [self.user addFriends:friends];
 }
 
 @end

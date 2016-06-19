@@ -7,7 +7,7 @@
 //
 
 @class KSFacebookContext;
-@class KSUser;
+@class KSUserModel;
 
 #import <UIKit/UIKit.h>
 
@@ -16,7 +16,7 @@
 @property (nonatomic, readonly) NSString            *imageNameForLeftButton;
 @property (nonatomic, readonly) NSString            *imageNameForRightButton;
 @property (nonatomic, strong)   KSFacebookContext   *context;
-@property (nonatomic, strong)   KSUser              *user;
+@property (nonatomic, strong)   KSUserModel         *user;
 
 - (void)showCustomNavigationBar;
 

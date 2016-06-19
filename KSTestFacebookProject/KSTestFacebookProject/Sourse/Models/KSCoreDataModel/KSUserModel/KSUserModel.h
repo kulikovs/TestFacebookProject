@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KSUserModel : KSManagedObject
 @property (nonatomic, assign)   BOOL            isLogedIn;
-@property (nonatomic, readonly) NSArray         *userFriends;
-
-- (void)addFriend:(KSUserModel *)friend;
-- (void)addFriends:(NSArray *)friends;
+//@property (nonatomic, readonly) NSArray         *userFriends;
+//
+//- (void)addFriend:(KSUserModel *)friend;
+//- (void)addFriends:(NSArray *)friends;
 - (void)removeFriend:(KSUserModel *)friend;
 - (void)removeFriends:(NSArray *)friends;
 

@@ -40,6 +40,10 @@ KSRootViewAndReturnNilMacro(KSLoginView);
 #pragma mark Handling
 
 - (IBAction)onClickLoginButton:(id)sender {
+//    NSURL *url = [NSURL URLWithString:@"http://tsn.ua/politika/savchenk-poletila-na-svoyu-pershu-sesiyu-parye-675559.html"];
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login logInWithReadPermissions:kKSLogInPermissions
      fromViewController:self
@@ -59,5 +63,7 @@ KSRootViewAndReturnNilMacro(KSLoginView);
          }
      }];
 }
+
+
 
 @end

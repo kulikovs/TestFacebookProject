@@ -1,4 +1,4 @@
-//
+ //
 //  KSFriendsContext.m
 //  KSTestFacebookProject
 //
@@ -18,19 +18,21 @@
 - (void)parseResult:(NSDictionary *)result {
     NSArray *array = [result valueForKeyPath:kKSFriendsKey];
     NSMutableArray *friends = [NSMutableArray array];
+//    KSUserModel *userModel = [[KSUserModel fetchEntityWithSortDescriptors:nil predicate:nil prefetchPaths:nil] firstObject];
+    
     
     for (NSDictionary *dictionary in array) {
         NSString *ID = [dictionary  valueForKey:kKSUserIDKey];
-       KSUserModel *user = [KSUserModel  objectWithID:ID];
-        
+        KSUserModel *user = [KSUserModel  objectWithID:ID];
+  //      userModel.firstName = [dictionary valueForKey:kKSFirstNameKey];
         user.firstName = [dictionary valueForKey:kKSFirstNameKey];
         user.lastName = [dictionary valueForKey:kKSLastNameKey];
         user.urlSmallImage = [dictionary valueForKeyPath:kKSPictureURLKey];
         
         [friends addObject:user];
     }
-    
-    [self.user addFriends:friends];
+  //  self.user.friends = [NSSet setWithArray:[friends copy]];
+    [self.user addFriends:[NSSet setWithArray:[friends copy]]];
 }
 
 @end

@@ -40,7 +40,7 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 }
 
 - (NSArray *)userFriends {
-   return self.user.userFriends;
+   return self.user.friends.allObjects;
 }
 
 - (NSString *)navigationBarTitle {

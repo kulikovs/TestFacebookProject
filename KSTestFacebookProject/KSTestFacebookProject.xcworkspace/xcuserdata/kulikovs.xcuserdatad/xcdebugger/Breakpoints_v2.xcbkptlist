@@ -73,13 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSTestFacebookProject/Sourse/Models/KSCoreDataModel/KSUserModel/KSUserModel.m"
-            timestampString = "487951987.646813"
+            filePath = "KSTestFacebookProject/Sourse/UI/KSFriendsViewController/KSFriendsViewController.m"
+            timestampString = "488045674.537274"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-addFriends:"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,29 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KSTestFacebookProject/Sourse/Models/KSCoreDataModel/KSUserModel/KSUserModel.m"
-            timestampString = "487951998.710259"
+            filePath = "KSTestFacebookProject/Sourse/UI/KSLoginViewController/KSLoginViewController.m"
+            timestampString = "488049820.874243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-addFriend:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KSTestFacebookProject/Sourse/Contexts/KSFriendsConext/KSFriendsContext.m"
-            timestampString = "487968154.173846"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-parseResult:"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-onClickLoginButton:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

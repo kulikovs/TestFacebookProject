@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class KSImageView;
-@class KSUser;
+@class KSUserModel;
 
 @interface KSUserViewCell : UITableViewCell
 @property (nonatomic, strong) IBOutlet UILabel                 *stringsLabel;
 @property (nonatomic, strong) IBOutlet KSImageView             *customImageView;
 
-- (void)fillWithUser:(KSUser *)user;
+- (void)fillWithUser:(KSUserModel *)user;
 
 @end

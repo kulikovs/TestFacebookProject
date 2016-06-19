@@ -8,15 +8,15 @@
 
 #import "KSUserViewCell.h"
 #import "KSImageView.h"
-#import "KSUser.h"
+#import "KSUserModel.h"
 
 @implementation KSUserViewCell
 
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)fillWithUser:(KSUser *)user {
-    self.customImageView.URL = [NSURL URLWithString:user.URLStringSmallImage];
+- (void)fillWithUser:(KSUserModel *)user {
+    self.customImageView.URL = [NSURL URLWithString:user.urlSmallImage];
     self.stringsLabel.text = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
 }
 

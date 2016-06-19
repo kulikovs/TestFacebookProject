@@ -15,7 +15,7 @@ static NSString * const kKSFriendsKey   = @"friends";
 @implementation KSUserModel
 
 @dynamic isLogedIn;
-@dynamic userFriends;
+//@dynamic userFriends;
 
 #pragma mark -
 #pragma mark Accessors
@@ -29,22 +29,22 @@ static NSString * const kKSFriendsKey   = @"friends";
     return value.boolValue;
 }
 
-- (NSArray *)friends {
-    NSSet *friends = [self customValueForKey:kKSFriendsKey];
-    return friends.allObjects;
-}
+//- (NSArray *)friends {
+//    NSSet *friends = [self customValueForKey:kKSFriendsKey];
+//    return friends.allObjects;
+//}
 
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)addFriend:(KSUserModel *)friend {
-    [self addCustomValue:friend inMutableSetForKey:kKSFriendsKey];
-}
+//- (void)addFriend:(KSUserModel *)friend {
+//    [self addCustomValue:friend inMutableSetForKey:kKSFriendsKey];
+//}
 
-- (void)addFriends:(NSArray *)friends {
-    NSSet *friendsSet = [NSSet setWithArray:friends];
-    [self addCustomValues:friendsSet inMutableSetForKey:kKSFriendsKey];
-}
+//- (void)addFriends:(NSArray *)friends {
+//    NSSet *friendsSet = [NSSet setWithArray:friends];
+//    [self addCustomValues:friendsSet inMutableSetForKey:kKSFriendsKey];
+//}
 
 - (void)removeFriend:(KSUserModel *)friend {
     [self removeCustomValue:friend inMutableSetForKey:kKSFriendsKey];

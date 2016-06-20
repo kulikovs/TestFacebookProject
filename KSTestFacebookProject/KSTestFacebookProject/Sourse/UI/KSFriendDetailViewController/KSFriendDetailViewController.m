@@ -69,6 +69,10 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
     [rootView removeLoadingViewAnimated:NO];
 }
 
+- (void)contextLoadFailed {
+    [self contextDidLoad];
+}
+
 - (void)clickRightBarButton {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

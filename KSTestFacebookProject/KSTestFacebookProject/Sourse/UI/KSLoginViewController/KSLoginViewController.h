@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KSCustomViewController.h"
 
 @interface KSLoginViewController : UIViewController
 

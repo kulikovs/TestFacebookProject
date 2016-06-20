@@ -20,7 +20,7 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ROr-1O-WLw" secondAttribute="height" multiplier="255:59" id="CJj-HB-JyJ"/>
                     </constraints>
-                    <state key="normal" title="Button" image="fblogin1.png"/>
+                    <state key="normal" title="Button" image="fblogin1"/>
                     <connections>
                         <action selector="onClickLoginButton:" destination="-1" eventType="touchUpInside" id="MpM-tG-Pih"/>
                     </connections>
@@ -39,6 +39,6 @@
         </view>
     </objects>
     <resources>
-        <image name="fblogin1.png" width="261" height="58"/>
+        <image name="fblogin1" width="261" height="58"/>
     </resources>
 </document>

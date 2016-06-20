@@ -8,7 +8,7 @@
 
 #import "KSManagedObject.h"
 
-static NSString * const KKSIDKey = @"ID";
+static NSString * const KKSIDKey = @"id";
 
 @implementation KSManagedObject
 
@@ -19,11 +19,12 @@ static NSString * const KKSIDKey = @"ID";
 #pragma mark Initializations and Deallocations
 
 + (instancetype)objectWithID:(NSString *)ID {
-//    KSManagedObject *object = [self findObjectWithID:ID];
-//    if (object) {
-//        return object;
-//    }
-   KSManagedObject * object = [self managedObject];
+    KSManagedObject *object = [self findObjectWithID:ID];
+    if (object) {
+        return object;
+    }
+    
+    object = [self managedObject];
     object.ID = ID;
     
     return object;

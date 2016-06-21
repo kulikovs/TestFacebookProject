@@ -7,13 +7,11 @@
 //
 
 #import "KSManagedObject.h"
-
-static NSString * const KKSIDKey = @"id";
+#import "KSCoreDataConstants.h"
 
 @implementation KSManagedObject
 
 @dynamic ID;
-
 
 #pragma mark -
 #pragma mark Initializations and Deallocations

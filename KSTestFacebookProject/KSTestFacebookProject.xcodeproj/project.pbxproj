@@ -105,12 +105,13 @@
 		C9511C591D0B342F0028870C /* iOS Study Plan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "iOS Study Plan.txt"; path = "KSTestFacebookProject/iOS Study Plan.txt"; sourceTree = "<group>"; };
 		C95D66A91D1189E000665DDD /* UIBarButtonItem+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KSExtensions.h"; sourceTree = "<group>"; };
 		C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KSExtensions.m"; sourceTree = "<group>"; };
+		C9695EA61D1991C70045CE42 /* KSCoreDataConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCoreDataConstants.h; sourceTree = "<group>"; };
+		C9695EA71D1991C70045CE42 /* KSFacebookConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFacebookConstants.h; sourceTree = "<group>"; };
 		C96AEFE11D107447005A4467 /* KSCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCustomViewController.h; sourceTree = "<group>"; };
 		C96AEFE21D107447005A4467 /* KSCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCustomViewController.m; sourceTree = "<group>"; };
 		C96EE96F1D0C7E0D007690E0 /* KSUserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserViewCell.h; sourceTree = "<group>"; };
 		C96EE9701D0C7E0D007690E0 /* KSUserViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserViewCell.m; sourceTree = "<group>"; };
 		C96EE9711D0C7E0D007690E0 /* KSUserViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSUserViewCell.xib; sourceTree = "<group>"; };
-		C96EE9741D0C84DE007690E0 /* KSFacebookConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSFacebookConstants.h; sourceTree = "<group>"; };
 		C97BFD751D09BFAE00F6D42A /* KSTestFacebookProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSTestFacebookProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97BFD921D09C42A00F6D42A /* CGGeometry+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+KSExtensions.h"; sourceTree = "<group>"; };
 		C97BFD931D09C42A00F6D42A /* CGGeometry+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+KSExtensions.m"; sourceTree = "<group>"; };
@@ -358,6 +359,15 @@
 				C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */,
 			);
 			path = "UIBarButtonItem+KSExtensions";
+			sourceTree = "<group>";
+		};
+		C9695EA51D1991C70045CE42 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C9695EA61D1991C70045CE42 /* KSCoreDataConstants.h */,
+				C9695EA71D1991C70045CE42 /* KSFacebookConstants.h */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		C96AEFE01D107435005A4467 /* KSCustomViewController */ = {
@@ -741,7 +751,7 @@
 		C97BFDFA1D09C42A00F6D42A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C96EE9741D0C84DE007690E0 /* KSFacebookConstants.h */,
+				C9695EA51D1991C70045CE42 /* Constants */,
 				C9511C431D0AE9B20028870C /* KSProject-Prefix.pch */,
 				C97BFDFB1D09C42A00F6D42A /* AppDelegate */,
 				C97BFE4B1D09DA2500F6D42A /* Base.lproj */,

@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "KSLoginViewController.h"
+#import "KSCoreDataConstants.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [IDPCoreDataManager sharedManagerWithMomName:@"KSCoreDataModel"];
+    [IDPCoreDataManager sharedManagerWithMomName:kKSCoreDataModelName];
     
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];

@@ -54,11 +54,9 @@ KSRootViewAndReturnNilMacro(KSFriendsView);
 #pragma mark -
 #pragma mark View LifeCycle
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    if (self.context.state!= kKSModelStateLoaded) {
-        [self.rootView showLoadingViewWithDefaultTextAnimated:YES];  //  question!!!
-    }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
 }
 
 #pragma mark -

@@ -18,10 +18,7 @@
 #import "KSUserModel.h"
 
 @interface KSLoginViewController ()
-@property (nonatomic, strong)   KSFriendsViewController *friendsViewControler;
-@property (nonatomic, readonly) KSLoginView             *rootView;
-@property (nonatomic, strong)   KSUserModel             *user;
-
+@property (nonatomic, readonly) KSLoginView *rootView;
 
 - (void)setUserWithID:(NSString *)IDString;
 @end
@@ -34,28 +31,6 @@
 #pragma mark Accessors
 
 KSRootViewAndReturnNilMacro(KSLoginView);
-
-//- (void)setUser:(KSUserModel *)user {
-//    [super setUser:user];
-//        user.isLogedIn = YES;
-//
-//        KSFriendsViewController *viewController = self.friendsViewControler;
-//        viewController.user = user;
-//        [self.navigationController pushViewController:viewController animated:YES];
-//}
-
-
-- (void)setUser:(KSUserModel *)user {
-    if (_user != user) {
-        _user = user;
-        
-        _user.isLogedIn = YES;
-        
-        KSFriendsViewController *viewController = self.friendsViewControler;
-        viewController.user = _user;
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
-}
 
 #pragma mark -
 #pragma mark View LifeCycle
@@ -70,7 +45,9 @@ KSRootViewAndReturnNilMacro(KSLoginView);
 
 - (void)setUserWithID:(NSString *)IDString {
     KSUserModel *user = [KSUserModel objectWithID:IDString];
-    self.user = user;
+    KSFriendsViewController *viewController = [KSFriendsViewController new];
+    viewController.user = user;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 
@@ -79,7 +56,6 @@ KSRootViewAndReturnNilMacro(KSLoginView);
 
 - (IBAction)onClickLoginButton:(id)sender {
     FBSDKAccessToken *accesstoken = [FBSDKAccessToken currentAccessToken];
-    self.friendsViewControler = [KSFriendsViewController new];
     if (accesstoken.tokenString) {
         [self setUserWithID:accesstoken.userID];
     } else {

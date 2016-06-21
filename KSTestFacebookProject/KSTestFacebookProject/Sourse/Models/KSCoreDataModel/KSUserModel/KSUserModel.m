@@ -8,9 +8,7 @@
 
 #import "KSUserModel.h"
 #import "IDPActiveRecordKit.h"
-
-static NSString * const kKSIsLogedInKey = @"isLogedIn";
-static NSString * const kKSFriendsKey   = @"friends";
+#import "KSCoreDataConstants.h"
 
 @implementation KSUserModel
 

@@ -18,7 +18,7 @@
 #pragma mark -
 #pragma mark Accessors
 
--(NSDictionary *)requestParameters {
+- (NSDictionary *)requestParameters {
     return kKSUserRequestParameters;
 }
 
@@ -26,7 +26,7 @@
 #pragma mark Public methods
 
 - (void)parseResult:(id)result {
-    self.user.gender = [result  valueForKey:kKSUserGenderKey];    
+    self.user.gender = [result  valueForKey:kKSUserGenderKey];
 }
 
 @end

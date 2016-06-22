@@ -21,6 +21,7 @@
 @property (nonatomic, readonly) KSLoginView *rootView;
 
 - (void)setUserWithID:(NSString *)IDString;
+
 @end
 
 @implementation KSLoginViewController
@@ -50,7 +51,6 @@ KSRootViewAndReturnNilMacro(KSLoginView);
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-
 #pragma mark -
 #pragma mark Handling
 
@@ -69,7 +69,5 @@ KSRootViewAndReturnNilMacro(KSLoginView);
                                 }];
     }
 }
-
-
 
 @end

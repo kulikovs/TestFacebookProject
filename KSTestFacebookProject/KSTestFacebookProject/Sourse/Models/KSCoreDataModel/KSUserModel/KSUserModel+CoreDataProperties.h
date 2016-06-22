@@ -2,7 +2,7 @@
 //  KSUserModel+CoreDataProperties.h
 //  KSTestFacebookProject
 //
-//  Created by KulikovS on 16.06.16.
+//  Created by KulikovS on 22.06.16.
 //  Copyright © 2016 KulikovS. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -10,6 +10,7 @@
 //
 
 #import "KSUserModel.h"
+#import "KSUserPhoto.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)     NSString   *urlLargeImage;
 @property (nonatomic, copy)     NSString   *urlSmallImage;
 
-@property (nonatomic, strong)     NSSet      <KSUserModel *> *friends;
+@property (nonatomic, strong)   NSSet      <KSUserModel *>  *friends;
+@property (nonatomic, strong)   NSSet      <KSUserPhoto *>  *photos;
 
 @end
 
@@ -31,6 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeFriendsObject:(KSUserModel *)value;
 - (void)addFriends:(NSSet<KSUserModel *> *)values;
 - (void)removeFriends:(NSSet<KSUserModel *> *)values;
+
+- (void)addPhotsoObject:(KSUserPhoto *)value;
+- (void)removePhotosObject:(KSUserPhoto *)value;
+- (void)addPhotos:(NSSet<KSUserPhoto *> *)values;
+- (void)removePhotos:(NSSet<KSUserPhoto *> *)values;
 
 @end
 

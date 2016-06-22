@@ -9,8 +9,16 @@
         <attribute name="urlLargeImage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="urlSmallImage" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KSUserModel" inverseName="friends" inverseEntity="KSUserModel" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KSUserPhoto" inverseName="user" inverseEntity="KSUserPhoto" syncable="YES"/>
+    </entity>
+    <entity name="KSUserPhoto" representedClassName="KSUserPhoto" syncable="YES">
+        <attribute name="dateModifications" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KSUserModel" inverseName="photos" inverseEntity="KSUserModel" syncable="YES"/>
     </entity>
     <elements>
-        <element name="KSUserModel" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="KSUserModel" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="KSUserPhoto" positionX="-479" positionY="66" width="128" height="103"/>
     </elements>
 </model>

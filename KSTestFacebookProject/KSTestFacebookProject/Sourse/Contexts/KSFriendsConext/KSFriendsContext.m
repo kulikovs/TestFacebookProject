@@ -22,7 +22,6 @@
     for (NSDictionary *dictionary in array) {
         NSString *ID = [dictionary  valueForKey:kKSUserIDKey];
         KSUserModel *user = [KSUserModel  objectWithID:ID];
-
         user.firstName = [dictionary valueForKey:kKSFirstNameKey];
         user.lastName = [dictionary valueForKey:kKSLastNameKey];
         user.urlSmallImage = [dictionary valueForKeyPath:kKSPictureURLKey];

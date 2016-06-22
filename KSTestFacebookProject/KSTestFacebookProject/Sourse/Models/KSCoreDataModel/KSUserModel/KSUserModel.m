@@ -13,7 +13,6 @@
 @implementation KSUserModel
 
 @dynamic isLogedIn;
-//@dynamic userFriends;
 
 #pragma mark -
 #pragma mark Accessors
@@ -25,32 +24,6 @@
 - (BOOL)isLogedIn {
     NSNumber *value = [self valueForKey:kKSIsLogedInKey];
     return value.boolValue;
-}
-
-//- (NSArray *)friends {
-//    NSSet *friends = [self customValueForKey:kKSFriendsKey];
-//    return friends.allObjects;
-//}
-
-#pragma mark -
-#pragma mark Public Methods
-
-//- (void)addFriend:(KSUserModel *)friend {
-//    [self addCustomValue:friend inMutableSetForKey:kKSFriendsKey];
-//}
-
-//- (void)addFriends:(NSArray *)friends {
-//    NSSet *friendsSet = [NSSet setWithArray:friends];
-//    [self addCustomValues:friendsSet inMutableSetForKey:kKSFriendsKey];
-//}
-
-- (void)removeFriend:(KSUserModel *)friend {
-    [self removeCustomValue:friend inMutableSetForKey:kKSFriendsKey];
-}
-
-- (void)removeFriends:(NSArray *)friends {
-    NSSet *friendsSet = [NSSet setWithArray:friends];
-    [self removeCustomValues:friendsSet inMutableSetForKey:kKSFriendsKey];
 }
 
 @end

@@ -13,4 +13,6 @@
 
 @interface KSFriendDetailViewController : KSCustomViewController
 
+- (IBAction)onClickUserPhotosButton:(id)sender;
+
 @end

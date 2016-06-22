@@ -24,6 +24,15 @@
 		C9511C501D0AEC170028870C /* KSFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9511C4C1D0AEC170028870C /* KSFriendsViewController.xib */; };
 		C9511C581D0B13FE0028870C /* KSFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C571D0B13FE0028870C /* KSFriendsView.m */; };
 		C9511C5A1D0B342F0028870C /* iOS Study Plan.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9511C591D0B342F0028870C /* iOS Study Plan.txt */; };
+		C953737D1D1A96ED00A90530 /* KSUserPhoto+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C953737A1D1A96ED00A90530 /* KSUserPhoto+CoreDataProperties.m */; };
+		C953737E1D1A96ED00A90530 /* KSUserPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = C953737C1D1A96ED00A90530 /* KSUserPhoto.m */; };
+		C95373831D1B241C00A90530 /* KSUserPhotosController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95373811D1B241C00A90530 /* KSUserPhotosController.m */; };
+		C95373841D1B241C00A90530 /* KSUserPhotosController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95373821D1B241C00A90530 /* KSUserPhotosController.xib */; };
+		C95373881D1B2AAB00A90530 /* KSUserPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95373871D1B2AAB00A90530 /* KSUserPhotosView.m */; };
+		C95373951D1B31F300A90530 /* KSUserPhotosContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C95373941D1B31F300A90530 /* KSUserPhotosContext.m */; };
+		C95373991D1B365D00A90530 /* KSUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C95373971D1B365D00A90530 /* KSUserCollectionViewCell.m */; };
+		C953739A1D1B365D00A90530 /* KSUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95373981D1B365D00A90530 /* KSUserCollectionViewCell.xib */; };
+		C953739F1D1B396E00A90530 /* UICollectionView+UICollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C953739E1D1B396E00A90530 /* UICollectionView+UICollectionView.m */; };
 		C95D66AB1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */; };
 		C96AEFE31D107447005A4467 /* KSCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96AEFE21D107447005A4467 /* KSCustomViewController.m */; };
 		C96EE9721D0C7E0D007690E0 /* KSUserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C96EE9701D0C7E0D007690E0 /* KSUserViewCell.m */; };
@@ -103,6 +112,22 @@
 		C9511C561D0B13FE0028870C /* KSFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFriendsView.h; sourceTree = "<group>"; };
 		C9511C571D0B13FE0028870C /* KSFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsView.m; sourceTree = "<group>"; };
 		C9511C591D0B342F0028870C /* iOS Study Plan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "iOS Study Plan.txt"; path = "KSTestFacebookProject/iOS Study Plan.txt"; sourceTree = "<group>"; };
+		C95373791D1A96ED00A90530 /* KSUserPhoto+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KSUserPhoto+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C953737A1D1A96ED00A90530 /* KSUserPhoto+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KSUserPhoto+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C953737B1D1A96ED00A90530 /* KSUserPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserPhoto.h; sourceTree = "<group>"; };
+		C953737C1D1A96ED00A90530 /* KSUserPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserPhoto.m; sourceTree = "<group>"; };
+		C95373801D1B241C00A90530 /* KSUserPhotosController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserPhotosController.h; sourceTree = "<group>"; };
+		C95373811D1B241C00A90530 /* KSUserPhotosController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserPhotosController.m; sourceTree = "<group>"; };
+		C95373821D1B241C00A90530 /* KSUserPhotosController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSUserPhotosController.xib; sourceTree = "<group>"; };
+		C95373861D1B2AAB00A90530 /* KSUserPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserPhotosView.h; sourceTree = "<group>"; };
+		C95373871D1B2AAB00A90530 /* KSUserPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserPhotosView.m; sourceTree = "<group>"; };
+		C95373931D1B31F300A90530 /* KSUserPhotosContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserPhotosContext.h; sourceTree = "<group>"; };
+		C95373941D1B31F300A90530 /* KSUserPhotosContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserPhotosContext.m; sourceTree = "<group>"; };
+		C95373961D1B365D00A90530 /* KSUserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserCollectionViewCell.h; sourceTree = "<group>"; };
+		C95373971D1B365D00A90530 /* KSUserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserCollectionViewCell.m; sourceTree = "<group>"; };
+		C95373981D1B365D00A90530 /* KSUserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSUserCollectionViewCell.xib; sourceTree = "<group>"; };
+		C953739D1D1B396E00A90530 /* UICollectionView+UICollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+UICollectionView.h"; sourceTree = "<group>"; };
+		C953739E1D1B396E00A90530 /* UICollectionView+UICollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+UICollectionView.m"; sourceTree = "<group>"; };
 		C95D66A91D1189E000665DDD /* UIBarButtonItem+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KSExtensions.h"; sourceTree = "<group>"; };
 		C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KSExtensions.m"; sourceTree = "<group>"; };
 		C9695EA61D1991C70045CE42 /* KSCoreDataConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCoreDataConstants.h; sourceTree = "<group>"; };
@@ -256,6 +281,7 @@
 		C94FEA751D12DDA7006AB333 /* KSCoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
+				C95373781D1A96ED00A90530 /* KSUserPhoto */,
 				C9F6A9961D14500E00A201CA /* KSManagedObject */,
 				C9F6A98F1D144BEE00A201CA /* KSUserModel */,
 				C94FEA761D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld */,
@@ -352,6 +378,65 @@
 			path = KSFriendsView;
 			sourceTree = "<group>";
 		};
+		C95373781D1A96ED00A90530 /* KSUserPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				C95373791D1A96ED00A90530 /* KSUserPhoto+CoreDataProperties.h */,
+				C953737A1D1A96ED00A90530 /* KSUserPhoto+CoreDataProperties.m */,
+				C953737B1D1A96ED00A90530 /* KSUserPhoto.h */,
+				C953737C1D1A96ED00A90530 /* KSUserPhoto.m */,
+			);
+			path = KSUserPhoto;
+			sourceTree = "<group>";
+		};
+		C953737F1D1B240400A90530 /* KSUserPhotosController */ = {
+			isa = PBXGroup;
+			children = (
+				C95373851D1B2A8400A90530 /* KSUserPhotosView */,
+				C95373801D1B241C00A90530 /* KSUserPhotosController.h */,
+				C95373811D1B241C00A90530 /* KSUserPhotosController.m */,
+				C95373821D1B241C00A90530 /* KSUserPhotosController.xib */,
+			);
+			path = KSUserPhotosController;
+			sourceTree = "<group>";
+		};
+		C95373851D1B2A8400A90530 /* KSUserPhotosView */ = {
+			isa = PBXGroup;
+			children = (
+				C95373861D1B2AAB00A90530 /* KSUserPhotosView.h */,
+				C95373871D1B2AAB00A90530 /* KSUserPhotosView.m */,
+			);
+			path = KSUserPhotosView;
+			sourceTree = "<group>";
+		};
+		C95373891D1B2E7100A90530 /* KSUserCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C95373961D1B365D00A90530 /* KSUserCollectionViewCell.h */,
+				C95373971D1B365D00A90530 /* KSUserCollectionViewCell.m */,
+				C95373981D1B365D00A90530 /* KSUserCollectionViewCell.xib */,
+			);
+			path = KSUserCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C95373921D1B31F300A90530 /* KSUserPhotosContext */ = {
+			isa = PBXGroup;
+			children = (
+				C95373931D1B31F300A90530 /* KSUserPhotosContext.h */,
+				C95373941D1B31F300A90530 /* KSUserPhotosContext.m */,
+			);
+			path = KSUserPhotosContext;
+			sourceTree = "<group>";
+		};
+		C953739B1D1B38A100A90530 /* UICollectionView+KSExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C953739D1D1B396E00A90530 /* UICollectionView+UICollectionView.h */,
+				C953739E1D1B396E00A90530 /* UICollectionView+UICollectionView.m */,
+			);
+			path = "UICollectionView+KSExtensions";
+			sourceTree = "<group>";
+		};
 		C95D66A81D1189B300665DDD /* UIBarButtonItem+KSExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +519,7 @@
 		C97BFD901D09C42A00F6D42A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C953739B1D1B38A100A90530 /* UICollectionView+KSExtensions */,
 				C95D66A81D1189B300665DDD /* UIBarButtonItem+KSExtensions */,
 				C97BFD911D09C42A00F6D42A /* CGGeometry+KSExtensions */,
 				C97BFD941D09C42A00F6D42A /* NSBundle+KSExtensions */,
@@ -720,6 +806,7 @@
 		C97BFDF71D09C42A00F6D42A /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
+				C95373921D1B31F300A90530 /* KSUserPhotosContext */,
 				C934100A1D0EE1B8002E9EE4 /* KSFriendDetailContext */,
 				C934100D1D0EE1B8002E9EE4 /* KSFriendsConext */,
 				C93410061D0EE0CD002E9EE4 /* KSFacebookContext */,
@@ -739,7 +826,9 @@
 		C97BFDF91D09C42A00F6D42A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C95373891D1B2E7100A90530 /* KSUserCollectionViewCell */,
 				C96AEFE01D107435005A4467 /* KSCustomViewController */,
+				C953737F1D1B240400A90530 /* KSUserPhotosController */,
 				C96EE96E1D0C7E0D007690E0 /* KSUserViewCell */,
 				C9511C451D0AEC170028870C /* KSFriendDetailViewController */,
 				C9511C491D0AEC170028870C /* KSFriendsViewController */,
@@ -904,11 +993,13 @@
 				C9511C5A1D0B342F0028870C /* iOS Study Plan.txt in Resources */,
 				C97BFE251D09C42A00F6D42A /* KSLoadingView.xib in Resources */,
 				C96EE9731D0C7E0D007690E0 /* KSUserViewCell.xib in Resources */,
+				C953739A1D1B365D00A90530 /* KSUserCollectionViewCell.xib in Resources */,
 				C97BFE3B1D09D00300F6D42A /* KSLoginViewController.xib in Resources */,
 				C9511C501D0AEC170028870C /* KSFriendsViewController.xib in Resources */,
 				C97BFE281D09C42A00F6D42A /* Assets.xcassets in Resources */,
 				C97BFE231D09C42A00F6D42A /* KSUserViewController.xib in Resources */,
 				C9511C4E1D0AEC170028870C /* KSFriendDetailViewController.xib in Resources */,
+				C95373841D1B241C00A90530 /* KSUserPhotosController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +1060,8 @@
 			files = (
 				C97BFE1D1D09C42A00F6D42A /* KSImageModel.m in Sources */,
 				C9511C421D0AE9530028870C /* KSObserverObject.m in Sources */,
+				C953737D1D1A96ED00A90530 /* KSUserPhoto+CoreDataProperties.m in Sources */,
+				C953739F1D1B396E00A90530 /* UICollectionView+UICollectionView.m in Sources */,
 				C93410101D0EE1B8002E9EE4 /* KSFriendDetailContext.m in Sources */,
 				C97BFE171D09C42A00F6D42A /* KSArrayModel.m in Sources */,
 				C97BFE1A1D09C42A00F6D42A /* KSModel.m in Sources */,
@@ -993,6 +1086,8 @@
 				C9511C3E1D0AE9530028870C /* KSDispatch.m in Sources */,
 				C97BFE191D09C42A00F6D42A /* KSCache.m in Sources */,
 				C9511C4F1D0AEC170028870C /* KSFriendsViewController.m in Sources */,
+				C95373951D1B31F300A90530 /* KSUserPhotosContext.m in Sources */,
+				C95373881D1B2AAB00A90530 /* KSUserPhotosView.m in Sources */,
 				C97BFE151D09C42A00F6D42A /* KSAlphabetRange.m in Sources */,
 				C97BFE181D09C42A00F6D42A /* KSArrayModelManager.m in Sources */,
 				C97BFE241D09C42A00F6D42A /* KSLoadingView.m in Sources */,
@@ -1000,6 +1095,7 @@
 				C97BFE0D1D09C42A00F6D42A /* UIWindow+KSExtension.m in Sources */,
 				C97BFE131D09C42A00F6D42A /* KSAlphabet.m in Sources */,
 				C97BFE581D09FCEA00F6D42A /* KSUser.m in Sources */,
+				C953737E1D1A96ED00A90530 /* KSUserPhoto.m in Sources */,
 				C9511C4D1D0AEC170028870C /* KSFriendDetailViewController.m in Sources */,
 				C9511C411D0AE9530028870C /* KSObserverDictionary.m in Sources */,
 				C97BFE051D09C42A00F6D42A /* CGGeometry+KSExtensions.m in Sources */,
@@ -1011,11 +1107,13 @@
 				C9F6A9951D144C7000A201CA /* KSUserModel+CoreDataProperties.m in Sources */,
 				C95D66AB1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m in Sources */,
 				C97BFE0B1D09C42A00F6D42A /* UITableView+KSExtensions.m in Sources */,
+				C95373831D1B241C00A90530 /* KSUserPhotosController.m in Sources */,
 				C9511C401D0AE9530028870C /* KSObserverArray.m in Sources */,
 				C93410111D0EE1B8002E9EE4 /* KSFriendsContext.m in Sources */,
 				C97BFE1B1D09C42A00F6D42A /* KSStateModel.m in Sources */,
 				C97BFE2C1D09C42A00F6D42A /* main.m in Sources */,
 				C97BFE141D09C42A00F6D42A /* KSAlphabetCluster.m in Sources */,
+				C95373991D1B365D00A90530 /* KSUserCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

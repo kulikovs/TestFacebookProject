@@ -14,6 +14,7 @@
 #import "KSFriendDetailContext.h"
 #import "KSUserModel.h"
 #import "KSStateModel.h"
+#import "KSUserPhotosController.h"
 
 static NSString * const kKSDetailFriendBarTitle       = @"Detailed Info";
 static NSString * const kKSLeftBarBattonImageName     = @"BackButton1";
@@ -36,7 +37,7 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 - (void)setUser:(KSUserModel *)user {
     [super setUser:user];
     
-      self.context = [[KSFriendDetailContext alloc] initWithUser:user];
+    self.context = [[KSFriendDetailContext alloc] initWithUser:user];
 }
 
 - (NSString *)navigationBarTitle {
@@ -56,8 +57,16 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark Handling
+
+- (IBAction)onClickUserPhotosButton:(id)sender {
+    KSUserPhotosController *photosController = [KSUserPhotosController new];
+    photosController.user = self.user;
+    [self.navigationController pushViewController:photosController animated:YES];
 }
 
 #pragma mark -

@@ -13,8 +13,8 @@
 @interface KSCustomViewController ()
 @property (nonatomic, readonly) UINavigationItem  *navigationItem;
 
-- (void)clickLeftBarButton;
-- (void)clickRightBarButton;
+- (void)leftBarButtonClick;
+- (void)rightBarButtonClick;
 
 @end
 
@@ -54,14 +54,6 @@
     }
 }
 
-- (void)setUser:(KSUserModel *)user {
-    if (_user != user) {
-        _user = user;
-        
-        [_user saveManagedObject];
-    }
-}
-
 #pragma mark -
 #pragma mark Life Cycle
 
@@ -90,11 +82,11 @@
                object:self];
 }
 
-- (void)clickLeftBarButton {
+- (void)leftBarButtonClick {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)clickRightBarButton {
+- (void)rightBarButtonClick {
     
 }
 
@@ -108,6 +100,7 @@
 - (void)contextLoadFailed {
 
 }
+
 - (void)showCustomNavigationBar {
     [self showNavigationBarWithTitle:self.navigationBarTitle
                  leftButtonImageName:self.imageNameForLeftButton
@@ -125,12 +118,12 @@
     
     navigationItem.leftBarButtonItem = [UIBarButtonItem
                                         buttonWithImageName:leftButtonImageName
-                                        selector:@selector(clickLeftBarButton)
+                                        selector:@selector(leftBarButtonClick)
                                         target:self];
     
     navigationItem.rightBarButtonItem = [UIBarButtonItem
                                          buttonWithImageName:rightButtonImageName
-                                         selector:@selector(clickRightBarButton)
+                                         selector:@selector(rightBarButtonClick)
                                          target:self];
 }
 

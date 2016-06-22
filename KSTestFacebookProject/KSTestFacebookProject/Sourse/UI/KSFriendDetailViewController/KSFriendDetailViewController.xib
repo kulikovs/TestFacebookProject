@@ -62,6 +62,13 @@
                     <rect key="frame" x="87" y="283" width="200" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kq-7L-kaV">
+                    <rect key="frame" x="132" y="543" width="97" height="31"/>
+                    <state key="normal" title="All photos"/>
+                    <connections>
+                        <action selector="onClickUserPhotosButton:" destination="-1" eventType="touchUpInside" id="XTd-cy-cgF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -91,6 +98,7 @@
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
+                <outlet property="allUserPhotos" destination="9Kq-7L-kaV" id="YYj-Mh-cB7"/>
                 <outlet property="firstName" destination="Id0-2B-arx" id="lL2-uF-SWe"/>
                 <outlet property="gender" destination="qJJ-Yu-297" id="Svg-mH-bTP"/>
                 <outlet property="largePhoto" destination="p3L-Pj-fw9" id="rVf-U2-cEu"/>

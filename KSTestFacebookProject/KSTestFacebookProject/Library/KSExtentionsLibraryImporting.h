@@ -20,5 +20,6 @@
 #import "NSBundle+KSExtensions.h"
 #import "KSDispatch.h"
 #import "UIBarButtonItem+KSExtensions.h"
+#import "UICollectionView+UICollectionView.h"
 
 #endif /* KSExtentionsLibraryImporting_h */

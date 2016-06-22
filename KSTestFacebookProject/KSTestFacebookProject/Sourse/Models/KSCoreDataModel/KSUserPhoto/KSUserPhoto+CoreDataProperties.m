@@ -1,5 +1,5 @@
 //
-//  KSUserModel+CoreDataProperties.m
+//  KSUserPhoto+CoreDataProperties.m
 //  KSTestFacebookProject
 //
 //  Created by KulikovS on 22.06.16.
@@ -9,17 +9,12 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "KSUserModel+CoreDataProperties.h"
+#import "KSUserPhoto+CoreDataProperties.h"
 
-@implementation KSUserModel (CoreDataProperties)
+@implementation KSUserPhoto (CoreDataProperties)
 
-@dynamic firstName;
-@dynamic gender;
-@dynamic lastName;
-@dynamic urlLargeImage;
-@dynamic urlSmallImage;
-@dynamic friends;
-
-@dynamic photos;
+@dynamic url;
+@dynamic dateModifications;
+@dynamic user;
 
 @end

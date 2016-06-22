@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UILabel      *lastName;
 @property (nonatomic, strong) IBOutlet UILabel      *gender;
 @property (nonatomic, strong) IBOutlet KSImageView  *largePhoto;
+@property (nonatomic, strong) IBOutlet UIButton     *allUserPhotos;
 
 - (void)fillWithUser:(KSUserModel *)user;
 

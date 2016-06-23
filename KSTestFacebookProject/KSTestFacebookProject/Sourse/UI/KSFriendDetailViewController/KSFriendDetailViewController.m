@@ -57,7 +57,9 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
+    if (self.context.state == kKSModelStateLoading) {
+        [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
+    }
 }
 
 #pragma mark -

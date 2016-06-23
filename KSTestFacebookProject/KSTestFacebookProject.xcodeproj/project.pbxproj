@@ -12,6 +12,8 @@
 		C93410101D0EE1B8002E9EE4 /* KSFriendDetailContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C934100C1D0EE1B8002E9EE4 /* KSFriendDetailContext.m */; };
 		C93410111D0EE1B8002E9EE4 /* KSFriendsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C934100F1D0EE1B8002E9EE4 /* KSFriendsContext.m */; };
 		C93C21C71D0D772900A2C5A9 /* KSFriendsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C21C61D0D772900A2C5A9 /* KSFriendsDetailView.m */; };
+		C94D63061D1BFDB30080283D /* KSUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C94D63041D1BFDB30080283D /* KSUserCollectionViewCell.m */; };
+		C94D63071D1BFDB30080283D /* KSUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94D63051D1BFDB30080283D /* KSUserCollectionViewCell.xib */; };
 		C94FEA781D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94FEA761D12DDC8006AB333 /* KSCoreDataModel.xcdatamodeld */; };
 		C9511C3E1D0AE9530028870C /* KSDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C301D0AE9530028870C /* KSDispatch.m */; };
 		C9511C3F1D0AE9530028870C /* KSObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C9511C331D0AE9530028870C /* KSObserver.m */; };
@@ -30,8 +32,6 @@
 		C95373841D1B241C00A90530 /* KSUserPhotosController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95373821D1B241C00A90530 /* KSUserPhotosController.xib */; };
 		C95373881D1B2AAB00A90530 /* KSUserPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95373871D1B2AAB00A90530 /* KSUserPhotosView.m */; };
 		C95373951D1B31F300A90530 /* KSUserPhotosContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C95373941D1B31F300A90530 /* KSUserPhotosContext.m */; };
-		C95373991D1B365D00A90530 /* KSUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C95373971D1B365D00A90530 /* KSUserCollectionViewCell.m */; };
-		C953739A1D1B365D00A90530 /* KSUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95373981D1B365D00A90530 /* KSUserCollectionViewCell.xib */; };
 		C953739F1D1B396E00A90530 /* UICollectionView+UICollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C953739E1D1B396E00A90530 /* UICollectionView+UICollectionView.m */; };
 		C95D66AB1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C95D66AA1D1189E000665DDD /* UIBarButtonItem+KSExtensions.m */; };
 		C96AEFE31D107447005A4467 /* KSCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96AEFE21D107447005A4467 /* KSCustomViewController.m */; };
@@ -90,6 +90,9 @@
 		C934100F1D0EE1B8002E9EE4 /* KSFriendsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsContext.m; sourceTree = "<group>"; };
 		C93C21C51D0D772900A2C5A9 /* KSFriendsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFriendsDetailView.h; sourceTree = "<group>"; };
 		C93C21C61D0D772900A2C5A9 /* KSFriendsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFriendsDetailView.m; sourceTree = "<group>"; };
+		C94D63031D1BFDB30080283D /* KSUserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserCollectionViewCell.h; sourceTree = "<group>"; };
+		C94D63041D1BFDB30080283D /* KSUserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserCollectionViewCell.m; sourceTree = "<group>"; };
+		C94D63051D1BFDB30080283D /* KSUserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSUserCollectionViewCell.xib; sourceTree = "<group>"; };
 		C94FEA771D12DDC8006AB333 /* KSCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KSCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C9511C2F1D0AE9530028870C /* KSDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDispatch.h; sourceTree = "<group>"; };
 		C9511C301D0AE9530028870C /* KSDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDispatch.m; sourceTree = "<group>"; };
@@ -123,9 +126,6 @@
 		C95373871D1B2AAB00A90530 /* KSUserPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserPhotosView.m; sourceTree = "<group>"; };
 		C95373931D1B31F300A90530 /* KSUserPhotosContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserPhotosContext.h; sourceTree = "<group>"; };
 		C95373941D1B31F300A90530 /* KSUserPhotosContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserPhotosContext.m; sourceTree = "<group>"; };
-		C95373961D1B365D00A90530 /* KSUserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUserCollectionViewCell.h; sourceTree = "<group>"; };
-		C95373971D1B365D00A90530 /* KSUserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUserCollectionViewCell.m; sourceTree = "<group>"; };
-		C95373981D1B365D00A90530 /* KSUserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSUserCollectionViewCell.xib; sourceTree = "<group>"; };
 		C953739D1D1B396E00A90530 /* UICollectionView+UICollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+UICollectionView.h"; sourceTree = "<group>"; };
 		C953739E1D1B396E00A90530 /* UICollectionView+UICollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+UICollectionView.m"; sourceTree = "<group>"; };
 		C95D66A91D1189E000665DDD /* UIBarButtonItem+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KSExtensions.h"; sourceTree = "<group>"; };
@@ -278,6 +278,16 @@
 			path = KSFriendsDetailView;
 			sourceTree = "<group>";
 		};
+		C94D63021D1BFDB30080283D /* KSUserCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C94D63031D1BFDB30080283D /* KSUserCollectionViewCell.h */,
+				C94D63041D1BFDB30080283D /* KSUserCollectionViewCell.m */,
+				C94D63051D1BFDB30080283D /* KSUserCollectionViewCell.xib */,
+			);
+			path = KSUserCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		C94FEA751D12DDA7006AB333 /* KSCoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +402,7 @@
 		C953737F1D1B240400A90530 /* KSUserPhotosController */ = {
 			isa = PBXGroup;
 			children = (
+				C94D63021D1BFDB30080283D /* KSUserCollectionViewCell */,
 				C95373851D1B2A8400A90530 /* KSUserPhotosView */,
 				C95373801D1B241C00A90530 /* KSUserPhotosController.h */,
 				C95373811D1B241C00A90530 /* KSUserPhotosController.m */,
@@ -407,16 +418,6 @@
 				C95373871D1B2AAB00A90530 /* KSUserPhotosView.m */,
 			);
 			path = KSUserPhotosView;
-			sourceTree = "<group>";
-		};
-		C95373891D1B2E7100A90530 /* KSUserCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				C95373961D1B365D00A90530 /* KSUserCollectionViewCell.h */,
-				C95373971D1B365D00A90530 /* KSUserCollectionViewCell.m */,
-				C95373981D1B365D00A90530 /* KSUserCollectionViewCell.xib */,
-			);
-			path = KSUserCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		C95373921D1B31F300A90530 /* KSUserPhotosContext */ = {
@@ -826,7 +827,6 @@
 		C97BFDF91D09C42A00F6D42A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C95373891D1B2E7100A90530 /* KSUserCollectionViewCell */,
 				C96AEFE01D107435005A4467 /* KSCustomViewController */,
 				C953737F1D1B240400A90530 /* KSUserPhotosController */,
 				C96EE96E1D0C7E0D007690E0 /* KSUserViewCell */,
@@ -993,7 +993,7 @@
 				C9511C5A1D0B342F0028870C /* iOS Study Plan.txt in Resources */,
 				C97BFE251D09C42A00F6D42A /* KSLoadingView.xib in Resources */,
 				C96EE9731D0C7E0D007690E0 /* KSUserViewCell.xib in Resources */,
-				C953739A1D1B365D00A90530 /* KSUserCollectionViewCell.xib in Resources */,
+				C94D63071D1BFDB30080283D /* KSUserCollectionViewCell.xib in Resources */,
 				C97BFE3B1D09D00300F6D42A /* KSLoginViewController.xib in Resources */,
 				C9511C501D0AEC170028870C /* KSFriendsViewController.xib in Resources */,
 				C97BFE281D09C42A00F6D42A /* Assets.xcassets in Resources */,
@@ -1067,6 +1067,7 @@
 				C97BFE1A1D09C42A00F6D42A /* KSModel.m in Sources */,
 				C93410091D0EE0FF002E9EE4 /* KSFacebookContext.m in Sources */,
 				C97BFE271D09C42A00F6D42A /* AppDelegate.m in Sources */,
+				C94D63061D1BFDB30080283D /* KSUserCollectionViewCell.m in Sources */,
 				C9511C3F1D0AE9530028870C /* KSObserver.m in Sources */,
 				C93C21C71D0D772900A2C5A9 /* KSFriendsDetailView.m in Sources */,
 				C97BFE3A1D09D00300F6D42A /* KSLoginViewController.m in Sources */,
@@ -1113,7 +1114,6 @@
 				C97BFE1B1D09C42A00F6D42A /* KSStateModel.m in Sources */,
 				C97BFE2C1D09C42A00F6D42A /* main.m in Sources */,
 				C97BFE141D09C42A00F6D42A /* KSAlphabetCluster.m in Sources */,
-				C95373991D1B365D00A90530 /* KSUserCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

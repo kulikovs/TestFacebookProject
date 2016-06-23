@@ -24,19 +24,20 @@
 #pragma mark -
 #pragma mark Public methods
 
-//- (void)parseResult:(NSDictionary *)result {
-//    NSArray *array = [result valueForKeyPath:kKSFriendsKey];
-//    NSMutableArray *friends = [NSMutableArray array];
-//    
-//    for (NSDictionary *dictionary in array) {
-//        NSString *ID = [dictionary  valueForKey:kKSUserIDKey];
-//        
-//        KSUserPhoto *photo = [KSUserPhoto  objectWithID:ID];
-
-//    }
+- (void)parseResult:(NSDictionary *)result {
+    NSArray *array = [result valueForKeyPath:kKSAlbumsDataKey];
     
-//    [self.user addFriends:[NSSet setWithArray:[friends copy]]];
-//}
+    for (NSDictionary *album in array) {
+        NSArray *photos = [album valueForKeyPath:kKSPhotoDataKey];
+        for (NSDictionary *photoDictionaty in photos) {
+            NSString *IDString = [photoDictionaty valueForKey:kKSIDKey];
+            KSUserPhoto *userPhoto = [KSUserPhoto objectWithID:IDString];
+            NSString *URLString = [photoDictionaty valueForKey:kKSPictureKey];
+            userPhoto.url = URLString;
+            userPhoto.user = self.user;
+        }
+    }
+}
 
 @end
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UICollectionView (UICollectionView)
-- (id)dequeueReusableCellFromNibWithClass:(Class)theClass;
+- (id)dequeueReusableCellFromNibWithClass:(Class)theClass indexPath:(NSIndexPath *)indexPath;
+- (void)registerCollectionViewCellWithClass:(Class)theClass;
 
 @end

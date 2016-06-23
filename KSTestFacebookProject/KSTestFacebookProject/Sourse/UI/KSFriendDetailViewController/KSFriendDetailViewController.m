@@ -55,8 +55,8 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
 #pragma mark -
 #pragma mark View LifeCycle
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
 }
 
@@ -82,7 +82,7 @@ KSRootViewAndReturnNilMacro(KSFriendsDetailView);
     [self contextDidLoad];
 }
 
-- (void)clickRightBarButton {
+- (void)rightBarButtonClick {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

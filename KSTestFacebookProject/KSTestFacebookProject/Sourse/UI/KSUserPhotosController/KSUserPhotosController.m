@@ -13,10 +13,11 @@
 
 static NSString * const kKSUserPhotosTitle          = @"User Photos";
 static NSString * const kKSLeftBurBattonImageName   = @"BackButton1";
+static NSString * const kKSRightBarBattonImageName  = @"home";
 
 @interface KSUserPhotosController ()
 @property (nonatomic, readonly) KSUserPhotosView   *rootView;
-@property (nonatomic, strong)   NSMutableArray     *photos;
+@property (nonatomic, strong)   NSArray            *photos;
 
 @end
 
@@ -43,12 +44,37 @@ KSRootViewAndReturnNilMacro(KSUserPhotosView);
     return kKSLeftBurBattonImageName;
 }
 
+- (void)setPhotos:(NSArray *)photos {
+    if (_photos != photos) {
+        _photos = photos;
+        
+        [self.rootView.collectionView reloadData];
+    }
+}
+
+- (NSString *)imageNameForRightButton {
+    return kKSRightBarBattonImageName;
+}
+
 #pragma mark -
 #pragma mark View LifeCycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.rootView.collectionView registerCollectionViewCellWithClass:[KSUserCollectionViewCell class]];
     [self.rootView showLoadingViewWithDefaultTextAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark - Public Methods
+
+- (void)contextDidLoad {
+    self.photos = [self.user.photos allObjects];
+   [self.rootView removeLoadingViewAnimated:YES];
+}
+
+- (void)rightBarButtonClick {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -58,13 +84,16 @@ KSRootViewAndReturnNilMacro(KSUserPhotosView);
     return self.photos.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    KSUserCollectionViewCell *cell = [collectionView dequeueReusableCellFromNibWithClass:[KSUserCollectionViewCell class]];
-   [cell fillWithPhotos:self.photos[indexPath]];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    KSUserCollectionViewCell *cell = [collectionView
+                                      dequeueReusableCellFromNibWithClass:[KSUserCollectionViewCell class]
+                                      indexPath:indexPath];
     
+    [cell fillWithPhoto:self.photos[indexPath.row]];
     
     return cell;
 }
-
 
 @end

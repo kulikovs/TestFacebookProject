@@ -19,7 +19,6 @@
 @dynamic urlLargeImage;
 @dynamic urlSmallImage;
 @dynamic friends;
-
 @dynamic photos;
 
 @end

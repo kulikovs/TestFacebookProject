@@ -11,5 +11,6 @@
 @interface UINib (KSExtensions)
 
 + (id)loadFromNibWithClass:(Class)theClass;
++ (instancetype)nibWithClass:(Class)theClass;
 
 @end

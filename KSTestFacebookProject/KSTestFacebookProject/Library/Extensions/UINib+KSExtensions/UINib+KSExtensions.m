@@ -11,8 +11,7 @@
 @implementation UINib (KSExtensions)
 
 + (id)loadFromNibWithClass:(Class)theClass {
-    UINib *nib = [UINib nibWithNibName:NSStringFromClass(theClass)
-                                bundle:[NSBundle mainBundle]];
+    UINib *nib = [self nibWithClass:theClass];
     
     NSArray *array = [nib instantiateWithOwner:self options:nil];
     for (id object in array) {
@@ -22,6 +21,10 @@
     }
     
     return nil;
+}
+
++ (instancetype)nibWithClass:(Class)theClass {
+    return [UINib nibWithNibName:NSStringFromClass(theClass) bundle:[NSBundle mainBundle]];
 }
 
 @end

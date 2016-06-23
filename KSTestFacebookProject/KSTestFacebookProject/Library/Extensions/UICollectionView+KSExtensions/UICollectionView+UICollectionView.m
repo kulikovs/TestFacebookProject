@@ -10,13 +10,18 @@
 
 @implementation UICollectionView (UICollectionView)
 
-- (id)dequeueReusableCellFromNibWithClass:(Class)theClass {
-    id cell = [self dequeueReusableCellFromNibWithClass:theClass];
+- (id)dequeueReusableCellFromNibWithClass:(Class)theClass indexPath:(NSIndexPath *)indexPath; {
+    
+    id cell = [self dequeueReusableCellWithReuseIdentifier:NSStringFromClass(theClass) forIndexPath:indexPath];
     if (!cell) {
         cell = [UINib loadFromNibWithClass:(theClass)];
     }
     
     return cell;
+}
+
+- (void)registerCollectionViewCellWithClass:(Class)theClass {
+    [self registerNib:[UINib nibWithClass:(theClass)] forCellWithReuseIdentifier:NSStringFromClass(theClass)];
 }
 
 @end

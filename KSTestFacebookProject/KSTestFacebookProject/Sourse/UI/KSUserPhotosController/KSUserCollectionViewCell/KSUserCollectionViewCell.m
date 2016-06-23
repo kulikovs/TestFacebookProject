@@ -10,4 +10,8 @@
 
 @implementation KSUserCollectionViewCell
 
+- (void)fillWithPhoto:(KSUserPhoto *)userPhoto {
+    self.customImageView.URL = [NSURL URLWithString:userPhoto.url];
+}
+
 @end

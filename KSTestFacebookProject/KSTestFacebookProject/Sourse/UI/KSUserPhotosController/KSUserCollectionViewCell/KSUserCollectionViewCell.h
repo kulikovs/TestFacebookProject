@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "KSImageView.h"
+#import "KSUserPhoto.h"
 
 @interface KSUserCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) IBOutlet KSImageView    *customImageView;
+
+- (void)fillWithPhoto:(KSUserPhoto *)userPhoto;
 
 @end

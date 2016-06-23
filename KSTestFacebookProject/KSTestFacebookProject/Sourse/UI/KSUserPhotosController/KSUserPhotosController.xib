@@ -14,13 +14,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7NH-Wu-U9u">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7NH-Wu-U9u">
                     <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qlc-Or-qbD">
-                        <size key="itemSize" width="180" height="180"/>
+                        <size key="itemSize" width="150" height="150"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="cpI-Yg-hF0"/>
@@ -29,6 +29,12 @@
                 </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7NH-Wu-U9u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="Zfz-dr-QmR"/>
+                <constraint firstItem="7NH-Wu-U9u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="irA-8E-8cg"/>
+                <constraint firstAttribute="trailing" secondItem="7NH-Wu-U9u" secondAttribute="trailing" id="jiY-Y2-wBC"/>
+                <constraint firstAttribute="bottom" secondItem="7NH-Wu-U9u" secondAttribute="bottom" id="vuI-Cc-XM0"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
                 <outlet property="collectionView" destination="7NH-Wu-U9u" id="PUL-IB-Rxy"/>

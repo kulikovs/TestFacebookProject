@@ -20,7 +20,7 @@
     NSMutableArray *friends = [NSMutableArray array];
     
     for (NSDictionary *dictionary in array) {
-        NSString *ID = [dictionary  valueForKey:kKSUserIDKey];
+        NSString *ID = [dictionary  valueForKey:kKSIDKey];
         KSUserModel *user = [KSUserModel  objectWithID:ID];
         user.firstName = [dictionary valueForKey:kKSFirstNameKey];
         user.lastName = [dictionary valueForKey:kKSLastNameKey];
